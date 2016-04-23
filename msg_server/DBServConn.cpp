@@ -67,7 +67,8 @@ void init_db_serv_conn(serv_info_t* server_list, uint32_t server_count,
 	g_db_server_login_count = (total_db_instance / 2) * concur_conn_cnt;
 	log(
 			"DB server connection index for login business: [0, %u), for other business: [%u, %u) ",
-			g_db_server_login_count, g_db_server_login_count, g_db_server_count);
+			g_db_server_login_count, g_db_server_login_count,
+			g_db_server_count);
 
 	serv_init<CDBServConn>(g_db_server_list, g_db_server_count);
 
@@ -272,6 +273,22 @@ void CDBServConn::HandlePdu(CImPdu* pPdu) {
 		s_file_handler->HandleFileHasOfflineRes(pPdu);
 		break;
 
+	case CID_BUDDY_LIST_ADD_USER_RESPONSE:
+		_HandleAddUserResponse(pPdu);
+		break;
+
+	case CID_BUDDY_LIST_AGREE_ADD_USER_REQUEST:
+		_HandleAgreeAddUserResponse(pPdu);
+		break;
+
+	case CID_BUDDY_LIST_DEL_REQUEST_USER_RESPONSE:
+	    _HandleDelUserResponse(pPdu);
+	        break;
+
+	case CID_BUDDY_LIST_ADD_REQUEST_USER_RESPONSE:
+	    _HandleAllUserRequestResponse(pPdu);
+		break;
+
 	default:
 		log("db server, wrong cmd id=%d ", pPdu->GetCommandId());
 	}
@@ -288,8 +305,8 @@ void CDBServConn::_HandleValidateResponse(CImPdu* pPdu) {
 	//反序列化
 	CDbAttachData attach_data((uchar_t*) msg.attach_data().c_str(),
 			msg.attach_data().length());
-	log("HandleValidateResp, user_name=%s, result=%d",
-			login_name.c_str(), result);
+	log("HandleValidateResp, user_name=%s, result=%d", login_name.c_str(),
+			result);
 	//通过昵称获取用户信息
 	CImUser* pImUser = CImUserManager::GetInstance()->GetImUserByLoginName(
 			login_name);
@@ -408,8 +425,8 @@ void CDBServConn::_HandleRecentSessionResponse(CImPdu *pPdu) {
 			msg.attach_data().length());
 	uint32_t handle = attach_data.GetHandle();
 
-	log("HandleRecentSessionResponse, userId=%u, session_cnt=%u",
-			user_id, session_cnt);
+	log("HandleRecentSessionResponse, userId=%u, session_cnt=%u", user_id,
+			session_cnt);
 
 	CMsgConn* pMsgConn = CImUserManager::GetInstance()->GetMsgConnByHandle(
 			user_id, handle);
@@ -434,6 +451,99 @@ void CDBServConn::_HandleAllUserResponse(CImPdu *pPdu) {
 	uint32_t handle = attach_data.GetHandle();
 
 	log("HandleAllUserResponse, userId=%u, latest_update_time=%u, user_cnt=%u",
+			user_id, latest_update_time, user_cnt);
+
+	CMsgConn* pMsgConn = CImUserManager::GetInstance()->GetMsgConnByHandle(
+			user_id, handle);
+
+	if (pMsgConn && pMsgConn->IsOpen()) {
+		msg.clear_attach_data();
+		pPdu->SetPBMsg(&msg);
+		pMsgConn->SendPdu(pPdu);
+	}
+}
+
+void CDBServConn::_HandleAddUserResponse(CImPdu *pPdu) {
+	IM::Buddy::IMAddUserRsp msg;
+	CHECK_PB_PARSE_MSG(
+				msg.ParseFromArray(pPdu->GetBodyData(), pPdu->GetBodyLength()));
+	uint32_t user_id = msg.user_id();
+	CDbAttachData attach_data((uchar_t*) msg.attach_data().c_str(),
+			msg.attach_data().length());
+	uint32_t handle = attach_data.GetHandle();
+
+	log("_HandleAddUserResponse, userId=%u, return code = %d", user_id,
+			msg.result_code());
+
+	CMsgConn* pMsgConn = CImUserManager::GetInstance()->GetMsgConnByHandle(
+			user_id, handle);
+
+	if (pMsgConn && pMsgConn->IsOpen()) {
+		msg.clear_attach_data();
+		pPdu->SetPBMsg(&msg);
+		pMsgConn->SendPdu(pPdu);
+	}
+}
+
+void CDBServConn::_HandleAgreeAddUserResponse(CImPdu *pPdu) {
+	IM::Buddy::IMAgreeAddUserRsp msg;
+	CHECK_PB_PARSE_MSG(
+			msg.ParseFromArray(pPdu->GetBodyData(), pPdu->GetBodyLength()));
+
+	uint32_t user_id = msg.user_id();
+	CDbAttachData attach_data((uchar_t*) msg.attach_data().c_str(),
+			msg.attach_data().length());
+	uint32_t handle = attach_data.GetHandle();
+
+	log("_HandleAgreeAddUserResponse, userId=%u", user_id);
+
+	CMsgConn* pMsgConn = CImUserManager::GetInstance()->GetMsgConnByHandle(
+			user_id, handle);
+
+	if (pMsgConn && pMsgConn->IsOpen()) {
+		msg.clear_attach_data();
+		pPdu->SetPBMsg(&msg);
+		pMsgConn->SendPdu(pPdu);
+	}
+}
+
+void CDBServConn::_HandleDelUserResponse(CImPdu *pPdu) {
+    IM::Buddy::IMDelUserRsp msg;
+    log("_HandleDelUserResponse");
+    CHECK_PB_PARSE_MSG(
+            msg.ParseFromArray(pPdu->GetBodyData(), pPdu->GetBodyLength()));
+
+    uint32_t user_id = msg.user_id();
+    CDbAttachData attach_data((uchar_t*) msg.attach_data().c_str(),
+            msg.attach_data().length());
+    uint32_t handle = attach_data.GetHandle();
+
+    log("_HandleDelUserResponse, userId=%u, ret = %d,", user_id, msg.result_code());
+
+    CMsgConn* pMsgConn = CImUserManager::GetInstance()->GetMsgConnByHandle(
+            user_id, handle);
+
+    if (pMsgConn && pMsgConn->IsOpen()) {
+        msg.clear_attach_data();
+        pPdu->SetPBMsg(&msg);
+        pMsgConn->SendPdu(pPdu);
+    }
+}
+
+void CDBServConn::_HandleAllUserRequestResponse(CImPdu *pPdu) {
+	IM::Buddy::IMListAddRequestUserRsp msg;
+	CHECK_PB_PARSE_MSG(
+			msg.ParseFromArray(pPdu->GetBodyData(), pPdu->GetBodyLength()));
+
+	uint32_t user_id = msg.user_id();
+	uint32_t latest_update_time = msg.latest_update_time();
+	uint32_t user_cnt = msg.user_list_size();
+	CDbAttachData attach_data((uchar_t*) msg.attach_data().c_str(),
+			msg.attach_data().length());
+	uint32_t handle = attach_data.GetHandle();
+
+	log(
+			"_HandleAllUserRequestResponse, userId=%u, latest_update_time=%u, user_cnt=%u",
 			user_id, latest_update_time, user_cnt);
 
 	CMsgConn* pMsgConn = CImUserManager::GetInstance()->GetMsgConnByHandle(
@@ -512,8 +622,8 @@ void CDBServConn::_HandleMsgData(CImPdu *pPdu) {
 	uint32_t to_user_id = msg.to_session_id();
 	uint32_t msg_id = msg.msg_id();
 	if (msg_id == 0) {
-		log("HandleMsgData, write db failed, %u->%u.",
-				from_user_id, to_user_id);
+		log("HandleMsgData, write db failed, %u->%u.", from_user_id,
+				to_user_id);
 		return;
 	}
 
@@ -647,7 +757,8 @@ void CDBServConn::_HandleUsersInfoResponse(CImPdu* pPdu) {
 
 void CDBServConn::_HandleStopReceivePacket(CImPdu* pPdu) {
 	log("HandleStopReceivePacket, from %s:%d.",
-			g_db_server_list[m_serv_idx].server_ip.c_str(), g_db_server_list[m_serv_idx].server_port);
+			g_db_server_list[m_serv_idx].server_ip.c_str(),
+			g_db_server_list[m_serv_idx].server_port);
 
 	m_bOpen = false;
 }
@@ -735,7 +846,8 @@ void CDBServConn::_HandleGetDeviceTokenResponse(CImPdu *pPdu) {
 
 	IM::Message::IMMsgData msg2;
 	CHECK_PB_PARSE_MSG(
-			msg2.ParseFromArray(msg.attach_data().c_str(), msg.attach_data().length()));
+			msg2.ParseFromArray(msg.attach_data().c_str(),
+					msg.attach_data().length()));
 	string msg_data = msg2.msg_data();
 	uint32_t msg_type = msg2.msg_type();
 	uint32_t from_id = msg2.from_user_id();
@@ -945,8 +1057,8 @@ void CDBServConn::_HandleQueryPushShieldResponse(CImPdu* pPdu) {
 	uint32_t result = msg.result_code();
 	// uint32_t shield_status = msg.shield_status();
 
-	log("_HandleQueryPushShieldResponse: user_id=%u, result=%u.",
-			user_id, result);
+	log("_HandleQueryPushShieldResponse: user_id=%u, result=%u.", user_id,
+			result);
 
 	CDbAttachData attach_data((uchar_t*) msg.attach_data().c_str(),
 			msg.attach_data().length());

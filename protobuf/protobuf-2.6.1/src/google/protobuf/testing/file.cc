@@ -31,7 +31,6 @@
 // Author: kenton@google.com (Kenton Varda)
 // emulates google3/file/base/file.cc
 
-#include <google/protobuf/testing/file.h>
 #include <stdio.h>
 #include <sys/stat.h>
 #include <sys/types.h>

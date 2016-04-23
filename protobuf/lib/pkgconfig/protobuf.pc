@@ -1,4 +1,4 @@
-prefix=/home/leaves-blue/Desktop/server/src/./protobuf
+prefix=/data/server/jiongmap/src/protobuf
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

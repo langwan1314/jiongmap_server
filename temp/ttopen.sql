@@ -26,21 +26,30 @@ DROP TABLE IF EXISTS `IMUser`;
 
 CREATE TABLE `IMUser` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户id',
-  `sex` tinyint(1) unsigned DEFAULT '0' COMMENT '1男2女0未知',
-  `name` varchar(32) COLLATE utf8mb4_bin  DEFAULT '' COMMENT '用户名',
-  `nick_name` varchar(32) COLLATE utf8mb4_bin NOT NULL DEFAULT '' COMMENT '花名,绰号等',
+  `sex` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '1男2女0未知',
+  `name` varchar(32) COLLATE utf8mb4_bin NOT NULL DEFAULT '' COMMENT '用户名',
+  `domain` varchar(32) COLLATE utf8mb4_bin  DEFAULT '' COMMENT '拼音',
+  `nick` varchar(32) COLLATE utf8mb4_bin NOT NULL DEFAULT '' COMMENT '花名,绰号等',
   `password` varchar(32) COLLATE utf8mb4_bin NOT NULL DEFAULT '' COMMENT '密码',
-  `mobile` varchar(11) COLLATE utf8mb4_bin NOT NULL DEFAULT '' COMMENT '手机号码',
+  `salt` varchar(4) COLLATE utf8mb4_bin  DEFAULT '' COMMENT '混淆码',
+  `phone` varchar(11) COLLATE utf8mb4_bin NOT NULL DEFAULT '' COMMENT '手机号码',
+  `email` varchar(64) COLLATE utf8mb4_bin  DEFAULT '' COMMENT 'email',
   `avatar` varchar(255) COLLATE utf8mb4_bin DEFAULT '' COMMENT '自定义用户头像',
-  `departId` int(11) unsigned DEFAULT '1' COMMENT '所属部门Id',
+  `departId` int(11) unsigned  COMMENT '所属部门Id',
   `status` tinyint(2) unsigned DEFAULT '0' COMMENT '1. 试用期 2. 正式 3. 离职 4.实习',
   `created` int(11) unsigned NOT NULL COMMENT '创建时间',
   `updated` int(11) unsigned NOT NULL COMMENT '更新时间',
   `push_shield_status` tinyint(1) unsigned DEFAULT '0' COMMENT '0关闭勿扰 1开启勿扰',
+  `sign_info` varchar(128) COLLATE utf8mb4_bin DEFAULT '' COMMENT '个性签名',
   PRIMARY KEY (`id`),
-  KEY `idx_name` (`nick_name`),
-  KEY `idx_phone` (`mobile`)
+  KEY `idx_domain` (`domain`),
+  KEY `idx_name` (`name`),
+  KEY `idx_phone` (`phone`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+INSERT INTO `IMUser` VALUES('1','1','test1','test1','test1','32a0c777b0977f82ccab3bd4042cc31d','1','13421358458','email','www','1','1','111111','11111','1','');
+INSERT INTO `IMUser` VALUES('2','1','test2','test2','test2','32a0c777b0977f82ccab3bd4042cc31d','1','13421358458','email','www','1','1','111111','11111','1','');
+INSERT INTO `IMUser` VALUES('3','1','test3','test3','test3','32a0c777b0977f82ccab3bd4042cc31d','1','13421358458','email','www','1','1','111111','11111','1','');
 
 # Dump of table IMFriends
 # ------------------------------------------------------------
@@ -51,6 +60,18 @@ CREATE TABLE `IMFriends` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',
   `smallId` int(11) unsigned NOT NULL COMMENT '用户ID 1',
   `bigId` int(11) unsigned NOT NULL COMMENT '用户ID 2',
+  `created` int(11) unsigned NOT NULL COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+DROP TABLE IF EXISTS `IMFriendsRequest`;
+
+CREATE TABLE `IMFriendsRequest` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `req_id` int(11) unsigned NOT NULL COMMENT '请求者',
+  `rsp_id` int(11) unsigned NOT NULL COMMENT '被请求者',
+  `status` tinyint(2) unsigned DEFAULT '0' COMMENT '消息处理状态 0-正常，1-同意',
+  `created` int(11) unsigned NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
@@ -69,9 +90,7 @@ CREATE TABLE `IMAdmin` (
 LOCK TABLES `IMAdmin` WRITE;
 /*!40000 ALTER TABLE `IMAdmin` DISABLE KEYS */;
 
-INSERT INTO `IMAdmin` (`id`, `uname`, `pwd`, `status`, `created`, `updated`)
-VALUES
-	(1,'admin','21232f297a57a5a743894a0e4a801fc3',0,0,0);
+INSERT INTO `IMAdmin` (`id`, `uname`, `pwd`, `status`, `created`, `updated`) VALUES	(1,'admin','21232f297a57a5a743894a0e4a801fc3',0,0,0);
 
 /*!40000 ALTER TABLE `IMAdmin` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -562,6 +581,6 @@ CREATE TABLE `IMRelationShip` (
   KEY `idx_smallId_bigId_status_updated` (`smallId`,`bigId`,`status`,`updated`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-#DROP USER IF EXISTS 'jiongmap'@'localhost'; 
+DROP USER  'jiongmap'@'localhost'; 
 CREATE USER 'jiongmap'@'localhost' IDENTIFIED BY 'jiongmap@leaves'; 
 GRANT ALL ON db_jiongmap.* TO 'jiongmap'@'localhost'; 

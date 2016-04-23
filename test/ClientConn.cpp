@@ -9,7 +9,7 @@
  *
  ================================================================*/
 #include "ClientConn.h"
-#include "playsound.h"
+//#include "playsound.h"
 #include "Common.h"
 
 
@@ -21,6 +21,8 @@ m_bOpen(false)
 
 ClientConn::~ClientConn()
 {
+
+
 
 }
 
@@ -104,9 +106,9 @@ uint32_t ClientConn::getUserInfo(uint32_t nUserId, list<uint32_t>& lsUserId)
     CImPdu cPdu;
     IM::Buddy::IMUsersInfoReq msg;
     msg.set_user_id(nUserId);
-    for (auto it=lsUserId.begin(); it!=lsUserId.end(); ++it) {
-        msg.add_user_id_list(*it);
-    }
+//    for (auto it=lsUserId.begin(); it!=lsUserId.end(); ++it) {
+//        msg.add_user_id_list(*it);
+//    }
     cPdu.SetPBMsg(&msg);
     cPdu.SetServiceId(IM::BaseDefine::SID_BUDDY_LIST);
     cPdu.SetCommandId(IM::BaseDefine::CID_BUDDY_LIST_USER_INFO_REQUEST);
@@ -403,7 +405,7 @@ void ClientConn::_HandleMsgData(CImPdu* pPdu)
     uint32_t nSeqNo = pPdu->GetSeqNum();
     if(msg.ParseFromArray(pPdu->GetBodyData(), pPdu->GetBodyLength()))
     {
-        play("message.wav");
+//        play("message.wav");
         
         uint32_t nFromId = msg.from_user_id();
         uint32_t nToId = msg.to_session_id();

@@ -1,10 +1,11 @@
 google/protobuf/compiler/java/java_file.lo: \
- google/protobuf/compiler/java/java_file.cc /usr/include/stdc-predef.h \
+ google/protobuf/compiler/java/java_file.cc \
  google/protobuf/compiler/java/java_file.h /usr/include/c++/4.8/memory \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/os_defines.h \
- /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/features.h /usr/include/x86_64-linux-gnu/bits/predefs.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
@@ -49,7 +50,6 @@ google/protobuf/compiler/java/java_file.lo: \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
- /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
  /usr/include/c++/4.8/bits/ostream_insert.h \
  /usr/include/c++/4.8/bits/cxxabi_forced.h \
  /usr/include/c++/4.8/bits/stl_function.h \
@@ -79,8 +79,6 @@ google/protobuf/compiler/java/java_file.lo: \
  /usr/include/x86_64-linux-gnu/bits/sigset.h \
  /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib.h /usr/include/c++/4.8/cstddef \
  /usr/include/string.h /usr/include/x86_64-linux-gnu/bits/string3.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
@@ -129,8 +127,6 @@ google/protobuf/compiler/java/java_file.lo: \
  google/protobuf/io/zero_copy_stream.h google/protobuf/dynamic_message.h \
  google/protobuf/stubs/strutil.h
 
-/usr/include/stdc-predef.h:
-
 google/protobuf/compiler/java/java_file.h:
 
 /usr/include/c++/4.8/memory:
@@ -142,6 +138,8 @@ google/protobuf/compiler/java/java_file.h:
 /usr/include/x86_64-linux-gnu/c++/4.8/bits/os_defines.h:
 
 /usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/bits/predefs.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
@@ -253,8 +251,6 @@ google/protobuf/compiler/java/java_file.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
-
 /usr/include/c++/4.8/bits/ostream_insert.h:
 
 /usr/include/c++/4.8/bits/cxxabi_forced.h:
@@ -324,10 +320,6 @@ google/protobuf/stubs/common.h:
 /usr/include/x86_64-linux-gnu/sys/sysmacros.h:
 
 /usr/include/alloca.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib.h:
 

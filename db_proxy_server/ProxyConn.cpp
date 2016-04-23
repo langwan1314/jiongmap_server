@@ -203,7 +203,7 @@ void CProxyConn::HandlePduBuf(uchar_t* pdu_buf, uint32_t pdu_len)
     if (pPdu->GetCommandId() == IM::BaseDefine::CID_OTHER_HEARTBEAT) {
         return;
     }
-    
+    log("HandlePduBuf---------------------------------------");
     pdu_handler_t handler = s_handler_map->GetHandler(pPdu->GetCommandId());
     
     if (handler) {

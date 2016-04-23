@@ -49,6 +49,7 @@ void CClient::onError(uint32_t nSeqNo, uint32_t nCmd,const string& strMsg)
 void CClient::connect()
 {
     CHttpClient httpClient;
+    m_strLoginDomain="http://192.168.1.38:8080";
     string strUrl = m_strLoginDomain + "/msg_server";
     string strResp;
     CURLcode nRet = httpClient.Get(strUrl, strResp);
@@ -77,9 +78,13 @@ void CClient::connect()
             PROMPTION;
             return;
         }
-        strPriorIp = value["priorIP"].asString();
-        strBackupIp = value["backupIp"].asString();
-        nPort = value["port"].asUInt();
+        Json::Value value2 = value["data"];
+        strPriorIp = value2["priorIP"].asString();
+        printf("strPriorIp :%s\n", strPriorIp.c_str());
+        strBackupIp = value2["backupIP"].asString();
+        printf("strBackupIp :%s\n", strBackupIp.c_str());
+        nPort = string2int(value2["port"].asString());
+//        printf("nPort :%d\n", nPort);
         
     } catch (std::runtime_error msg) {
         printf("login falied. get json error:%s\n", strResp.c_str());
@@ -88,6 +93,8 @@ void CClient::connect()
     }
     
     g_pConn = new ClientConn();
+//    printf("login falied. get json error:%s\n", strResp.c_str());
+
     m_nHandle = g_pConn->connect(strPriorIp.c_str(), nPort, m_strName, m_strPass);
     if(m_nHandle != INVALID_SOCKET)
     {
@@ -164,7 +171,7 @@ void CClient::onGetChangedUser(uint32_t nSeqNo, const list<IM::BaseDefine::UserI
                 delete it1->second;
                 m_mapId2UserInfo[nUserId] = pUserInfo;
             }
-            
+
             auto it2 = m_mapNick2UserInfo.find(strNick);
             if(it2 == m_mapNick2UserInfo.end())
             {

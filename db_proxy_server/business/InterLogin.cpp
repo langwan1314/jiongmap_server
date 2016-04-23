@@ -18,7 +18,7 @@ bool CInterLoginStrategy::doLogin(const std::string &strName, const std::string 
     CDBManager* pDBManger = CDBManager::getInstance();
     CDBConn* pDBConn = pDBManger->GetDBConn("teamtalk_slave");
     if (pDBConn) {
-        string strSql = "select * from IMUser where name='" + strName + "' and status=0";
+        string strSql = "select * from IMUser where name='" + strName + "'";
         CResultSet* pResultSet = pDBConn->ExecuteQuery(strSql.c_str());
         if(pResultSet)
         {
@@ -47,6 +47,8 @@ bool CInterLoginStrategy::doLogin(const std::string &strName, const std::string 
             char szMd5[33];
             CMd5::MD5_Calculate(strInPass.c_str(), strInPass.length(), szMd5);
             string strOutPass(szMd5);
+            log("strName =%s, strPass=%s.", strName.c_str(),strPass.c_str());
+            log("strOutPass =%s, strResult=%s.", strOutPass.c_str(),strResult.c_str());
             if(strOutPass == strResult)
             {
                 bRet = true;

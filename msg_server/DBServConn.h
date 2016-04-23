@@ -49,6 +49,11 @@ private:
     
     void _HandlePushShieldResponse(CImPdu* pPdu);
     void _HandleQueryPushShieldResponse(CImPdu* pPdu);
+
+    void _HandleAddUserResponse(CImPdu *pPdu);
+    void _HandleAgreeAddUserResponse(CImPdu *pPdu);
+    void _HandleAllUserRequestResponse(CImPdu *pPdu);
+    void _HandleDelUserResponse(CImPdu *pPdu);
 private:
 	bool 		m_bOpen;
 	uint32_t	m_serv_idx;

@@ -17,7 +17,7 @@
 #include "Thread.h"
 #include "IM.BaseDefine.pb.h"
 #include "IM.Buddy.pb.h"
-#include "playsound.h"
+//#include "playsound.h"
 #include "Common.h"
 #include "Client.h"
 using namespace std;

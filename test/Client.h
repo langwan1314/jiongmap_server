@@ -12,7 +12,8 @@
 #ifndef __CLIENT_H__
 #define __CLIENT_H__
 #include <iostream>
-//#include "ostype.h"
+#include "ostype.h"
+#include <map>
 #include "IM.BaseDefine.pb.h"
 #include "IPacketCallback.h"
 using namespace std;

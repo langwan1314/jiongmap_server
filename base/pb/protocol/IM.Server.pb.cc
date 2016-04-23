@@ -37,6 +37,7 @@ void protobuf_ShutdownFile_IM_2eServer_2eproto() {
   delete IMFileTransferRsp::default_instance_;
   delete IMFileServerIPReq::default_instance_;
   delete IMFileServerIPRsp::default_instance_;
+  delete IMAddUserReq::default_instance_;
 }
 
 #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
@@ -72,6 +73,7 @@ void protobuf_AddDesc_IM_2eServer_2eproto() {
   IMFileTransferRsp::default_instance_ = new IMFileTransferRsp();
   IMFileServerIPReq::default_instance_ = new IMFileServerIPReq();
   IMFileServerIPRsp::default_instance_ = new IMFileServerIPRsp();
+  IMAddUserReq::default_instance_ = new IMAddUserReq();
   IMStopReceivePacket::default_instance_->InitAsDefaultInstance();
   IMValidateReq::default_instance_->InitAsDefaultInstance();
   IMValidateRsp::default_instance_->InitAsDefaultInstance();
@@ -92,6 +94,7 @@ void protobuf_AddDesc_IM_2eServer_2eproto() {
   IMFileTransferRsp::default_instance_->InitAsDefaultInstance();
   IMFileServerIPReq::default_instance_->InitAsDefaultInstance();
   IMFileServerIPRsp::default_instance_->InitAsDefaultInstance();
+  IMAddUserReq::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_IM_2eServer_2eproto);
 }
 
@@ -5415,6 +5418,322 @@ void IMFileServerIPRsp::Swap(IMFileServerIPRsp* other) {
 
 ::std::string IMFileServerIPRsp::GetTypeName() const {
   return "IM.Server.IMFileServerIPRsp";
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int IMAddUserReq::kUserIdFieldNumber;
+const int IMAddUserReq::kPeerIdFieldNumber;
+const int IMAddUserReq::kStatusFieldNumber;
+const int IMAddUserReq::kAttachDataFieldNumber;
+#endif  // !_MSC_VER
+
+IMAddUserReq::IMAddUserReq()
+  : ::google::protobuf::MessageLite() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:IM.Server.IMAddUserReq)
+}
+
+void IMAddUserReq::InitAsDefaultInstance() {
+}
+
+IMAddUserReq::IMAddUserReq(const IMAddUserReq& from)
+  : ::google::protobuf::MessageLite() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:IM.Server.IMAddUserReq)
+}
+
+void IMAddUserReq::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  user_id_ = 0u;
+  peer_id_ = 0u;
+  status_ = 0u;
+  attach_data_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+IMAddUserReq::~IMAddUserReq() {
+  // @@protoc_insertion_point(destructor:IM.Server.IMAddUserReq)
+  SharedDtor();
+}
+
+void IMAddUserReq::SharedDtor() {
+  if (attach_data_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete attach_data_;
+  }
+  #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  if (this != &default_instance()) {
+  #else
+  if (this != default_instance_) {
+  #endif
+  }
+}
+
+void IMAddUserReq::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const IMAddUserReq& IMAddUserReq::default_instance() {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_AddDesc_IM_2eServer_2eproto();
+#else
+  if (default_instance_ == NULL) protobuf_AddDesc_IM_2eServer_2eproto();
+#endif
+  return *default_instance_;
+}
+
+IMAddUserReq* IMAddUserReq::default_instance_ = NULL;
+
+IMAddUserReq* IMAddUserReq::New() const {
+  return new IMAddUserReq;
+}
+
+void IMAddUserReq::Clear() {
+#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
+  &reinterpret_cast<IMAddUserReq*>(16)->f) - \
+   reinterpret_cast<char*>(16))
+
+#define ZR_(first, last) do {                              \
+    size_t f = OFFSET_OF_FIELD_(first);                    \
+    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
+    ::memset(&first, 0, n);                                \
+  } while (0)
+
+  if (_has_bits_[0 / 32] & 15) {
+    ZR_(user_id_, peer_id_);
+    status_ = 0u;
+    if (has_attach_data()) {
+      if (attach_data_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        attach_data_->clear();
+      }
+    }
+  }
+
+#undef OFFSET_OF_FIELD_
+#undef ZR_
+
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->clear();
+}
+
+bool IMAddUserReq::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::io::StringOutputStream unknown_fields_string(
+      mutable_unknown_fields());
+  ::google::protobuf::io::CodedOutputStream unknown_fields_stream(
+      &unknown_fields_string);
+  // @@protoc_insertion_point(parse_start:IM.Server.IMAddUserReq)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(16383);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required uint32 user_id = 1;
+      case 1: {
+        if (tag == 8) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &user_id_)));
+          set_has_user_id();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(16)) goto parse_peer_id;
+        break;
+      }
+
+      // required uint32 peer_id = 2;
+      case 2: {
+        if (tag == 16) {
+         parse_peer_id:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &peer_id_)));
+          set_has_peer_id();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(24)) goto parse_status;
+        break;
+      }
+
+      // optional uint32 status = 3;
+      case 3: {
+        if (tag == 24) {
+         parse_status:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &status_)));
+          set_has_status();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(162)) goto parse_attach_data;
+        break;
+      }
+
+      // optional bytes attach_data = 20;
+      case 20: {
+        if (tag == 162) {
+         parse_attach_data:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_attach_data()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormatLite::SkipField(
+            input, tag, &unknown_fields_stream));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:IM.Server.IMAddUserReq)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:IM.Server.IMAddUserReq)
+  return false;
+#undef DO_
+}
+
+void IMAddUserReq::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:IM.Server.IMAddUserReq)
+  // required uint32 user_id = 1;
+  if (has_user_id()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->user_id(), output);
+  }
+
+  // required uint32 peer_id = 2;
+  if (has_peer_id()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->peer_id(), output);
+  }
+
+  // optional uint32 status = 3;
+  if (has_status()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->status(), output);
+  }
+
+  // optional bytes attach_data = 20;
+  if (has_attach_data()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      20, this->attach_data(), output);
+  }
+
+  output->WriteRaw(unknown_fields().data(),
+                   unknown_fields().size());
+  // @@protoc_insertion_point(serialize_end:IM.Server.IMAddUserReq)
+}
+
+int IMAddUserReq::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required uint32 user_id = 1;
+    if (has_user_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->user_id());
+    }
+
+    // required uint32 peer_id = 2;
+    if (has_peer_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->peer_id());
+    }
+
+    // optional uint32 status = 3;
+    if (has_status()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->status());
+    }
+
+    // optional bytes attach_data = 20;
+    if (has_attach_data()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::BytesSize(
+          this->attach_data());
+    }
+
+  }
+  total_size += unknown_fields().size();
+
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void IMAddUserReq::CheckTypeAndMergeFrom(
+    const ::google::protobuf::MessageLite& from) {
+  MergeFrom(*::google::protobuf::down_cast<const IMAddUserReq*>(&from));
+}
+
+void IMAddUserReq::MergeFrom(const IMAddUserReq& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_user_id()) {
+      set_user_id(from.user_id());
+    }
+    if (from.has_peer_id()) {
+      set_peer_id(from.peer_id());
+    }
+    if (from.has_status()) {
+      set_status(from.status());
+    }
+    if (from.has_attach_data()) {
+      set_attach_data(from.attach_data());
+    }
+  }
+  mutable_unknown_fields()->append(from.unknown_fields());
+}
+
+void IMAddUserReq::CopyFrom(const IMAddUserReq& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool IMAddUserReq::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
+
+  return true;
+}
+
+void IMAddUserReq::Swap(IMAddUserReq* other) {
+  if (other != this) {
+    std::swap(user_id_, other->user_id_);
+    std::swap(peer_id_, other->peer_id_);
+    std::swap(status_, other->status_);
+    std::swap(attach_data_, other->attach_data_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.swap(other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::std::string IMAddUserReq::GetTypeName() const {
+  return "IM.Server.IMAddUserReq";
 }
 
 

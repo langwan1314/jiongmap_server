@@ -21,6 +21,11 @@ namespace DB_PROXY {
     void changeUserSignInfo(CImPdu* pPdu, uint32_t conn_uuid);
     void doPushShield(CImPdu* pPdu, uint32_t conn_uuid);
     void doQueryPushShield(CImPdu* pPdu, uint32_t conn_uuid);
+    void addUserRequest(CImPdu* pPdu, uint32_t conn_uuid);
+    void agreeAddUser(CImPdu* pPdu, uint32_t conn_uuid);
+    void getAddUserRequest(CImPdu* pPdu, uint32_t conn_uuid);
+    void getAddRequestDetail(CImPdu* pPdu, uint32_t conn_uuid);
+    void deldUser(CImPdu* pPdu, uint32_t conn_uuid);
 };
 
 
