@@ -555,3 +555,587 @@
 2016-04-23 22:45:11,492 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
 2016-04-23 22:45:11,492 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
 2016-04-23 22:45:11,492 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:45:43,481 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:45:43,481 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:45:43,481 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:45:43,481 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:45:43,481 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:45:43,481 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:46:47,498 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:46:47,498 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:46:47,498 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:46:47,498 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:46:47,498 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:46:47,498 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:46:51,493 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:46:51,493 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:46:51,493 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:46:51,493 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:46:51,493 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:46:51,493 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:46:59,509 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:46:59,509 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:46:59,509 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:46:59,509 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:46:59,509 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:46:59,509 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:47:15,497 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:47:15,497 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:47:15,497 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:47:15,497 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:47:15,497 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:47:15,497 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:47:47,478 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:47:47,478 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:47:47,478 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:47:47,478 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:47:47,478 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:47:47,478 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:48:51,459 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:48:51,459 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:48:51,459 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:48:51,459 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:48:51,459 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:48:51,459 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:48:55,536 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:48:55,536 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:48:55,536 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:48:55,536 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:48:55,536 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:48:55,536 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:49:03,507 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:49:03,507 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:49:03,507 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:49:03,507 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:49:03,507 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:49:03,507 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:49:19,445 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:49:19,445 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:49:19,445 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:49:19,445 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:49:19,446 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:49:19,446 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:49:43,465 [INFO  IM] - <MsgConn.cpp>|<68>|<msg_conn_timer_callback>,up_msg_cnt=0, up_msg_miss_cnt=0, down_msg_cnt=0, down_msg_miss_cnt=0 
+2016-04-23 22:49:51,465 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:49:51,465 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:49:51,465 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:49:51,465 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:49:51,465 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:49:51,465 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:50:55,476 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:50:55,476 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:50:55,476 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:50:55,476 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:50:55,476 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:50:55,476 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:50:59,514 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:50:59,514 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:50:59,514 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:50:59,514 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:50:59,514 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:50:59,514 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:51:07,473 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:51:07,473 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:51:07,473 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:51:07,473 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:51:07,473 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:51:07,473 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:51:23,475 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:51:23,475 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:51:23,475 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:51:23,475 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:51:23,475 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:51:23,475 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:51:55,460 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:51:55,460 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:51:55,460 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:51:55,460 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:51:55,460 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:51:55,460 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:52:59,498 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:52:59,498 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:52:59,498 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:52:59,498 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:52:59,498 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:52:59,498 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:53:03,483 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:53:03,483 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:53:03,483 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:53:03,483 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:53:03,483 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:53:03,483 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:53:11,504 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:53:11,504 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:53:11,504 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:53:11,504 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:53:11,504 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:53:11,504 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:53:27,456 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:53:27,456 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:53:27,456 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:53:27,457 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:53:27,457 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:53:27,457 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:53:59,483 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:53:59,483 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:53:59,483 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:53:59,483 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:53:59,483 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:53:59,483 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:54:43,484 [INFO  IM] - <MsgConn.cpp>|<68>|<msg_conn_timer_callback>,up_msg_cnt=0, up_msg_miss_cnt=0, down_msg_cnt=0, down_msg_miss_cnt=0 
+2016-04-23 22:55:03,458 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:55:03,458 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:55:03,458 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:55:03,458 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:55:03,458 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:55:03,458 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:55:07,493 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:55:07,493 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:55:07,493 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:55:07,493 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:55:07,493 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:55:07,493 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:55:15,466 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:55:15,466 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:55:15,466 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:55:15,466 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:55:15,466 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:55:15,466 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:55:31,502 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:55:31,502 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:55:31,502 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:55:31,502 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:55:31,502 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:55:31,502 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:56:03,492 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:56:03,492 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:56:03,492 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:56:03,492 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:56:03,492 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:56:03,492 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:57:07,449 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:57:07,449 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:57:07,449 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:57:07,449 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:57:07,449 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:57:07,449 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:57:11,487 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:57:11,487 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:57:11,487 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:57:11,487 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:57:11,487 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:57:11,487 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:57:19,454 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:57:19,454 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:57:19,454 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:57:19,454 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:57:19,454 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:57:19,454 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:57:35,499 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:57:35,499 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:57:35,499 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:57:35,499 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:57:35,500 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:57:35,500 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:58:07,499 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:58:07,499 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:58:07,499 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:58:07,499 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:58:07,499 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:58:07,499 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:59:11,461 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:59:11,461 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:59:11,461 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:59:11,461 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:59:11,461 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:59:11,461 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:59:15,491 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:59:15,491 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:59:15,491 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:59:15,491 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:59:15,491 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:59:15,491 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:59:23,462 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:59:23,462 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:59:23,462 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:59:23,462 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:59:23,462 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:59:23,462 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:59:39,511 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 22:59:39,511 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 22:59:39,511 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 22:59:39,511 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 22:59:39,511 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 22:59:39,511 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 22:59:43,487 [INFO  IM] - <MsgConn.cpp>|<68>|<msg_conn_timer_callback>,up_msg_cnt=0, up_msg_miss_cnt=0, down_msg_cnt=0, down_msg_miss_cnt=0 
+2016-04-23 23:00:11,447 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:00:11,447 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:00:11,447 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:00:11,447 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:00:11,447 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:00:11,447 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:01:15,510 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:01:15,510 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:01:15,510 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:01:15,510 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:01:15,510 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:01:15,510 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:01:19,494 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:01:19,494 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:01:19,494 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:01:19,494 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:01:19,494 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:01:19,494 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:01:27,466 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:01:27,466 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:01:27,466 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:01:27,466 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:01:27,466 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:01:27,466 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:01:43,467 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:01:43,467 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:01:43,467 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:01:43,467 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:01:43,467 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:01:43,467 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:02:15,492 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:02:15,492 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:02:15,492 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:02:15,492 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:02:15,492 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:02:15,492 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:03:19,458 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:03:19,459 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:03:19,459 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:03:19,459 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:03:19,459 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:03:19,459 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:03:23,441 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:03:23,441 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:03:23,441 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:03:23,441 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:03:23,441 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:03:23,441 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:03:31,530 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:03:31,530 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:03:31,530 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:03:31,530 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:03:31,530 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:03:31,530 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:03:47,515 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:03:47,515 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:03:47,515 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:03:47,515 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:03:47,515 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:03:47,515 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:04:19,482 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:04:19,482 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:04:19,482 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:04:19,482 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:04:19,482 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:04:19,482 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:04:44,493 [INFO  IM] - <MsgConn.cpp>|<68>|<msg_conn_timer_callback>,up_msg_cnt=0, up_msg_miss_cnt=0, down_msg_cnt=0, down_msg_miss_cnt=0 
+2016-04-23 23:05:23,439 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:05:23,439 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:05:23,439 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:05:23,439 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:05:23,439 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:05:23,439 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:05:27,468 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:05:27,468 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:05:27,468 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:05:27,468 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:05:27,468 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:05:27,468 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:05:35,440 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:05:35,441 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:05:35,441 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:05:35,441 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:05:35,441 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:05:35,441 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:05:51,492 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:05:51,492 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:05:51,492 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:05:51,492 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:05:51,492 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:05:51,492 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:06:23,519 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:06:23,519 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:06:23,519 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:06:23,519 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:06:23,519 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:06:23,519 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:07:27,532 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:07:27,532 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:07:27,532 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:07:27,532 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:07:27,532 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:07:27,532 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:07:31,476 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:07:31,476 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:07:31,476 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:07:31,476 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:07:31,476 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:07:31,476 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:07:39,491 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:07:39,491 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:07:39,491 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:07:39,491 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:07:39,491 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:07:39,491 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:07:55,479 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:07:55,479 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:07:55,479 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:07:55,479 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:07:55,479 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:07:55,479 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:08:27,457 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:08:27,457 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:08:27,457 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:08:27,457 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:08:27,457 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:08:27,457 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:09:31,494 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:09:31,494 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:09:31,494 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:09:31,494 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:09:31,494 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:09:31,494 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:09:35,529 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:09:35,529 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:09:35,529 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:09:35,529 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:09:35,529 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:09:35,529 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:09:43,507 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:09:43,508 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:09:43,508 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:09:43,508 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:09:43,508 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:09:43,508 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:09:44,518 [INFO  IM] - <MsgConn.cpp>|<68>|<msg_conn_timer_callback>,up_msg_cnt=0, up_msg_miss_cnt=0, down_msg_cnt=0, down_msg_miss_cnt=0 
+2016-04-23 23:09:59,489 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:09:59,489 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:09:59,489 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:09:59,489 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:09:59,489 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:09:59,489 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:10:31,457 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:10:31,457 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:10:31,457 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:10:31,457 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:10:31,457 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:10:31,457 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:11:35,470 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:11:35,470 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:11:35,471 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:11:35,471 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:11:35,471 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:11:35,471 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:11:39,510 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:11:39,510 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:11:39,510 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:11:39,510 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:11:39,510 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:11:39,510 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:11:47,511 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:11:47,511 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:11:47,511 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:11:47,511 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:11:47,511 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:11:47,511 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:12:03,493 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:12:03,493 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:12:03,493 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:12:03,493 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:12:03,493 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:12:03,493 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:12:35,466 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:12:35,466 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:12:35,466 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:12:35,466 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:12:35,466 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:12:35,466 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:13:39,442 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:13:39,442 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:13:39,442 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:13:39,442 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:13:39,442 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:13:39,442 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:13:43,485 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:13:43,485 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:13:43,485 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:13:43,485 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:13:43,485 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:13:43,485 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:13:51,504 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:13:51,504 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:13:51,505 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:13:51,505 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:13:51,505 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:13:51,505 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:14:07,485 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:14:07,485 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:14:07,485 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:14:07,485 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:14:07,485 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:14:07,485 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:14:39,460 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:14:39,460 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:14:39,460 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:14:39,460 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:14:39,460 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:14:39,460 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:14:45,466 [INFO  IM] - <MsgConn.cpp>|<68>|<msg_conn_timer_callback>,up_msg_cnt=0, up_msg_miss_cnt=0, down_msg_cnt=0, down_msg_miss_cnt=0 
+2016-04-23 23:15:43,475 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:15:43,475 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:15:43,476 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:15:43,476 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:15:43,476 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:15:43,476 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:15:47,468 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:15:47,469 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:15:47,469 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:15:47,469 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:15:47,469 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:15:47,469 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:15:55,484 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:15:55,484 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:15:55,484 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:15:55,484 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:15:55,484 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:15:55,484 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:16:11,463 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:16:11,463 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:16:11,463 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:16:11,463 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:16:11,463 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:16:11,463 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:16:43,501 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:16:43,501 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:16:43,501 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:16:43,501 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:16:43,501 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:16:43,501 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:17:47,514 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:17:47,514 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:17:47,514 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:17:47,514 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:17:47,514 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:17:47,514 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:17:51,493 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:17:51,493 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:17:51,493 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:17:51,493 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:17:51,493 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:17:51,493 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:17:59,513 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:17:59,513 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:17:59,514 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:17:59,514 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:17:59,514 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:17:59,514 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:18:15,511 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:18:15,511 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:18:15,511 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:18:15,511 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:18:15,511 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:18:15,511 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:18:47,487 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:18:47,488 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:18:47,488 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:18:47,488 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:18:47,488 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:18:47,488 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:19:45,495 [INFO  IM] - <MsgConn.cpp>|<68>|<msg_conn_timer_callback>,up_msg_cnt=0, up_msg_miss_cnt=0, down_msg_cnt=0, down_msg_miss_cnt=0 
+2016-04-23 23:19:51,514 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:19:51,514 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:19:51,514 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:19:51,514 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:19:51,514 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:19:51,514 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:19:55,487 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:19:55,488 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:19:55,488 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:19:55,488 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:19:55,488 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:19:55,488 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:20:03,466 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:20:03,466 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:20:03,466 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:20:03,466 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:20:03,466 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:20:03,466 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:20:19,514 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:20:19,514 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:20:19,514 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:20:19,514 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:20:19,514 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:20:19,514 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:20:51,474 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:20:51,474 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:20:51,474 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:20:51,474 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:20:51,474 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:20:51,474 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:21:55,460 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:21:55,460 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:21:55,460 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:21:55,460 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:21:55,460 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:21:55,460 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:21:59,510 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:21:59,510 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:21:59,510 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:21:59,511 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:21:59,511 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:21:59,511 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:22:07,486 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:22:07,486 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:22:07,487 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:22:07,487 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:22:07,487 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:22:07,487 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:22:23,518 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:22:23,518 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:22:23,518 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:22:23,518 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:22:23,518 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:22:23,518 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:22:55,496 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:22:55,497 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:22:55,497 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:22:55,497 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:22:55,497 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:22:55,497 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:23:59,464 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:23:59,464 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:23:59,464 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:23:59,464 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:23:59,464 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:23:59,464 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:24:03,436 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:24:03,437 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:24:03,437 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:24:03,437 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:24:03,437 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:24:03,437 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:24:11,462 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:24:11,462 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:24:11,462 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:24:11,462 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:24:11,462 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:24:11,462 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:24:27,506 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:24:27,506 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:24:27,506 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:24:27,506 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:24:27,506 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:24:27,506 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
+2016-04-23 23:24:45,499 [INFO  IM] - <MsgConn.cpp>|<68>|<msg_conn_timer_callback>,up_msg_cnt=0, up_msg_miss_cnt=0, down_msg_cnt=0, down_msg_miss_cnt=0 
+2016-04-23 23:24:59,516 [INFO  IM] - <FileServConn.cpp>|<112>|<Connect>,Connecting to FileServer 192.168.1.38:8600 
+2016-04-23 23:24:59,516 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8600
+2016-04-23 23:24:59,516 [INFO  IM] - <PushServConn.cpp>|<128>|<Connect>,Connecting to Push Server 192.168.1.38:8500 
+2016-04-23 23:24:59,516 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8500
+2016-04-23 23:24:59,516 [INFO  IM] - <FileServConn.cpp>|<152>|<OnClose>,onclose from file server handle=7 
+2016-04-23 23:24:59,516 [INFO  IM] - <PushServConn.cpp>|<163>|<OnClose>,onclose from push server handle=8 
