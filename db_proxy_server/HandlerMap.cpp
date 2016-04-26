@@ -111,6 +111,7 @@ void CHandlerMap::Init()
     m_handler_map.insert(make_pair(uint32_t(CID_BUDDY_LIST_AGREE_ADD_USER_REQUEST), DB_PROXY::agreeAddUser));
     m_handler_map.insert(make_pair(uint32_t(CID_BUDDY_LIST_ADD_REQUEST_USER_REQUEST), DB_PROXY::getAddRequestDetail));
     m_handler_map.insert(make_pair(uint32_t(CID_BUDDY_LIST_DEL_REQUEST_USER_REQUEST), DB_PROXY::deldUser));
+    m_handler_map.insert(make_pair(uint32_t(CID_BUDDY_LIST_QUERY_USER_REQUEST), DB_PROXY::queryAllUser));
 
 }
 

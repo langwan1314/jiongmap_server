@@ -54,6 +54,7 @@ private:
     void _HandleAgreeAddUserResponse(CImPdu *pPdu);
     void _HandleAllUserRequestResponse(CImPdu *pPdu);
     void _HandleDelUserResponse(CImPdu *pPdu);
+    void _HandleQueryUserRequestResponse(CImPdu *pPdu);
 private:
 	bool 		m_bOpen;
 	uint32_t	m_serv_idx;

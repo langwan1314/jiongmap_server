@@ -223,6 +223,56 @@ void deldUser(CImPdu* pPdu, uint32_t conn_uuid)
     }
 }
 
+void queryAllUser(CImPdu* pPdu, uint32_t conn_uuid)
+{
+    IM::Buddy::IMQueryUserReq msg;
+    IM::Buddy::IMQueryUserRsp msgResp;
+    log("queryAllUser");
+    if (msg.ParseFromArray(pPdu->GetBodyData(), pPdu->GetBodyLength()))
+    {
+        CImPdu* pPduRes = new CImPdu;
+
+        uint32_t peerId = msg.peer_id();
+        uint32_t peer_gender = msg.peer_gender();
+        string peer_nick_name = msg.peer_nick_name();
+        uint32_t peer_departement_id = msg.peer_department_id();
+        string peer_tel = msg.peer_tel();
+        uint32_t peer_status = msg.peer_status();
+        list<IM::BaseDefine::UserInfo> lsUsers;
+        list<uint32_t> lsIds;
+        CUserModel::getInstance()->queryUsers(peerId, peer_gender,
+                peer_nick_name, peer_departement_id, peer_tel, peer_status,
+                lsUsers);
+        msgResp.set_user_id(msg.user_id());
+        for (list<IM::BaseDefine::UserInfo>::iterator it = lsUsers.begin();
+                it != lsUsers.end(); ++it)
+        {
+            IM::BaseDefine::UserInfo* pUser = msgResp.add_user_list();
+            //            *pUser = *it;
+            pUser->set_user_id(it->user_id());
+            pUser->set_user_gender(it->user_gender());
+            pUser->set_user_nick_name(it->user_nick_name());
+            pUser->set_avatar_url(it->avatar_url());
+            pUser->set_sign_info(it->sign_info());
+            pUser->set_department_id(it->department_id());
+            pUser->set_email(it->email());
+            pUser->set_user_real_name(it->user_real_name());
+            pUser->set_user_tel(it->user_tel());
+            pUser->set_user_domain(it->user_domain());
+            pUser->set_status(it->status());
+        }
+        msgResp.set_attach_data(msg.attach_data());
+        pPduRes->SetPBMsg(&msgResp);
+        pPduRes->SetSeqNum(pPdu->GetSeqNum());
+        pPduRes->SetServiceId(IM::BaseDefine::SID_BUDDY_LIST);
+        pPduRes->SetCommandId(IM::BaseDefine::CID_BUDDY_LIST_QUERY_USER_RESPONSE);
+        CProxyConn::AddResponsePdu(conn_uuid, pPduRes);
+    } else
+    {
+        log("parse pb failed");
+    }
+}
+
 void getAddRequestDetail(CImPdu* pPdu, uint32_t conn_uuid)
 {
     IM::Buddy::IMListAddRequestUserReq msg;

@@ -276,3 +276,11 @@
 2016-04-23 22:43:29,445 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 192.168.1.38:8000
 2016-04-23 22:44:43,545 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 127.0.0.1:8600
 2016-04-23 22:44:43,545 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 192.168.1.38:8000
+2016-04-26 22:28:46,191 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 127.0.0.1:8600
+2016-04-26 22:28:46,192 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 192.168.1.38:8000
+2016-04-26 22:37:20,114 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 127.0.0.1:8600
+2016-04-26 22:37:20,115 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 192.168.1.38:8000
+2016-04-26 22:49:52,198 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 127.0.0.1:8600
+2016-04-26 22:49:52,198 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 192.168.1.38:8000
+2016-04-26 22:52:06,095 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 127.0.0.1:8600
+2016-04-26 22:52:06,095 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 192.168.1.38:8000

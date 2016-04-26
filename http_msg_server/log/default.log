@@ -4755,3 +4755,186 @@
 2016-04-23 22:44:47,636 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
 2016-04-23 22:44:47,636 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
 2016-04-23 22:44:47,636 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-24 17:10:02,039 [INFO  IM] - <DBServConn.cpp>|<202>|<OnTimer>,conn to db server timeout
+2016-04-24 17:10:02,039 [INFO  IM] - <DBServConn.cpp>|<202>|<OnTimer>,conn to db server timeout
+2016-04-24 17:10:02,039 [INFO  IM] - <DBServConn.cpp>|<202>|<OnTimer>,conn to db server timeout
+2016-04-24 17:10:02,039 [INFO  IM] - <DBServConn.cpp>|<202>|<OnTimer>,conn to db server timeout
+2016-04-24 17:10:02,039 [INFO  IM] - <RouteServConn.cpp>|<184>|<OnTimer>,conn to route server timeout 
+2016-04-24 17:10:02,351 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-24 17:10:02,351 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-24 17:10:02,351 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-24 17:10:02,351 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-24 17:10:02,351 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-24 17:10:02,351 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-24 17:10:02,351 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-24 17:10:02,351 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-24 17:10:02,351 [INFO  IM] - <RouteServConn.cpp>|<126>|<Connect>,Connecting to RouteServer 192.168.1.38:8200 
+2016-04-24 17:10:02,351 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8200
+2016-04-24 17:10:02,351 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-24 17:10:02,351 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-24 17:10:02,351 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-24 17:10:02,351 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-24 17:10:02,351 [INFO  IM] - <RouteServConn.cpp>|<155>|<OnConfirm>,connect to route server success 
+2016-04-25 06:33:08,983 [INFO  IM] - <DBServConn.cpp>|<202>|<OnTimer>,conn to db server timeout
+2016-04-25 06:33:08,984 [INFO  IM] - <DBServConn.cpp>|<202>|<OnTimer>,conn to db server timeout
+2016-04-25 06:33:08,984 [INFO  IM] - <DBServConn.cpp>|<202>|<OnTimer>,conn to db server timeout
+2016-04-25 06:33:08,984 [INFO  IM] - <DBServConn.cpp>|<202>|<OnTimer>,conn to db server timeout
+2016-04-25 06:33:08,984 [INFO  IM] - <RouteServConn.cpp>|<168>|<OnClose>,onclose from route server handle=11 
+2016-04-25 06:33:09,185 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-25 06:33:09,185 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-25 06:33:09,185 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-25 06:33:09,185 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-25 06:33:09,185 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-25 06:33:09,185 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-25 06:33:09,185 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-25 06:33:09,185 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-25 06:33:09,185 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-25 06:33:09,185 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-25 06:33:09,185 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-25 06:33:09,185 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-25 06:33:09,185 [INFO  IM] - <RouteServConn.cpp>|<126>|<Connect>,Connecting to RouteServer 192.168.1.38:8200 
+2016-04-25 06:33:09,185 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8200
+2016-04-25 06:33:09,185 [INFO  IM] - <RouteServConn.cpp>|<155>|<OnConfirm>,connect to route server success 
+2016-04-26 20:32:33,614 [INFO  IM] - <DBServConn.cpp>|<202>|<OnTimer>,conn to db server timeout
+2016-04-26 20:32:33,615 [INFO  IM] - <DBServConn.cpp>|<202>|<OnTimer>,conn to db server timeout
+2016-04-26 20:32:33,615 [INFO  IM] - <DBServConn.cpp>|<202>|<OnTimer>,conn to db server timeout
+2016-04-26 20:32:33,615 [INFO  IM] - <DBServConn.cpp>|<202>|<OnTimer>,conn to db server timeout
+2016-04-26 20:32:33,615 [INFO  IM] - <RouteServConn.cpp>|<184>|<OnTimer>,conn to route server timeout 
+2016-04-26 20:32:33,948 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 20:32:33,948 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 20:32:33,948 [INFO  IM] - <BaseSocket.cpp>|<111>|<Connect>,connect failed, err_code=101
+2016-04-26 20:32:33,948 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 20:32:33,948 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 20:32:33,948 [INFO  IM] - <BaseSocket.cpp>|<111>|<Connect>,connect failed, err_code=101
+2016-04-26 20:32:33,948 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 20:32:33,949 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 20:32:33,949 [INFO  IM] - <BaseSocket.cpp>|<111>|<Connect>,connect failed, err_code=101
+2016-04-26 20:32:33,949 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 20:32:33,949 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 20:32:33,949 [INFO  IM] - <BaseSocket.cpp>|<111>|<Connect>,connect failed, err_code=101
+2016-04-26 20:32:33,949 [INFO  IM] - <RouteServConn.cpp>|<126>|<Connect>,Connecting to RouteServer 192.168.1.38:8200 
+2016-04-26 20:32:33,949 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8200
+2016-04-26 20:32:33,949 [INFO  IM] - <BaseSocket.cpp>|<111>|<Connect>,connect failed, err_code=101
+2016-04-26 22:28:46,242 [INFO  IM] - <http_msg_server.cpp>|<47>|<main>,MsgServer max files can open: 1024 
+2016-04-26 22:28:46,242 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 127.0.0.1:8400
+2016-04-26 22:28:46,242 [INFO  IM] - <DBServConn.cpp>|<82>|<init_db_serv_conn>,DB server connection index for login business: [0, 2), for other business: [2, 4)
+2016-04-26 22:28:46,242 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:28:46,242 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:28:46,243 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:28:46,243 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:28:46,243 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:28:46,243 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:28:46,243 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:28:46,243 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:28:46,243 [INFO  IM] - <RouteServConn.cpp>|<126>|<Connect>,Connecting to RouteServer 192.168.1.38:8200 
+2016-04-26 22:28:46,243 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8200
+2016-04-26 22:28:46,243 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=7
+2016-04-26 22:28:46,243 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=8
+2016-04-26 22:28:46,243 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=9
+2016-04-26 22:28:46,243 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=10
+2016-04-26 22:28:46,243 [INFO  IM] - <RouteServConn.cpp>|<155>|<OnConfirm>,connect to route server success 
+2016-04-26 22:28:50,277 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:28:50,277 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:28:50,277 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:28:50,277 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:28:50,277 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:28:50,277 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:28:50,277 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:28:50,277 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:28:50,277 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:28:50,277 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:28:50,277 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:28:50,277 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:36:28,084 [INFO  IM] - <RouteServConn.cpp>|<168>|<OnClose>,onclose from route server handle=11 
+2016-04-26 22:37:20,166 [INFO  IM] - <http_msg_server.cpp>|<47>|<main>,MsgServer max files can open: 1024 
+2016-04-26 22:37:20,166 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 127.0.0.1:8400
+2016-04-26 22:37:20,166 [INFO  IM] - <DBServConn.cpp>|<82>|<init_db_serv_conn>,DB server connection index for login business: [0, 2), for other business: [2, 4)
+2016-04-26 22:37:20,166 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:37:20,166 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:37:20,166 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:37:20,166 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:37:20,166 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:37:20,166 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:37:20,166 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:37:20,166 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:37:20,166 [INFO  IM] - <RouteServConn.cpp>|<126>|<Connect>,Connecting to RouteServer 192.168.1.38:8200 
+2016-04-26 22:37:20,166 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8200
+2016-04-26 22:37:20,166 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=7
+2016-04-26 22:37:20,166 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=8
+2016-04-26 22:37:20,166 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=9
+2016-04-26 22:37:20,166 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=10
+2016-04-26 22:37:20,166 [INFO  IM] - <RouteServConn.cpp>|<155>|<OnConfirm>,connect to route server success 
+2016-04-26 22:37:24,200 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:37:24,200 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:37:24,200 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:37:24,200 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:37:24,200 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:37:24,200 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:37:24,200 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:37:24,200 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:37:24,200 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:37:24,200 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:37:24,200 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:37:24,200 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:49:37,535 [INFO  IM] - <RouteServConn.cpp>|<168>|<OnClose>,onclose from route server handle=11 
+2016-04-26 22:49:52,254 [INFO  IM] - <http_msg_server.cpp>|<47>|<main>,MsgServer max files can open: 1024 
+2016-04-26 22:49:52,254 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 127.0.0.1:8400
+2016-04-26 22:49:52,254 [INFO  IM] - <DBServConn.cpp>|<82>|<init_db_serv_conn>,DB server connection index for login business: [0, 2), for other business: [2, 4)
+2016-04-26 22:49:52,254 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:49:52,254 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:49:52,254 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:49:52,254 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:49:52,254 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:49:52,254 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:49:52,254 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:49:52,254 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:49:52,254 [INFO  IM] - <RouteServConn.cpp>|<126>|<Connect>,Connecting to RouteServer 192.168.1.38:8200 
+2016-04-26 22:49:52,254 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8200
+2016-04-26 22:49:52,255 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=7
+2016-04-26 22:49:52,255 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=8
+2016-04-26 22:49:52,255 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=9
+2016-04-26 22:49:52,255 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=10
+2016-04-26 22:49:52,255 [INFO  IM] - <RouteServConn.cpp>|<155>|<OnConfirm>,connect to route server success 
+2016-04-26 22:49:56,293 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:49:56,293 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:49:56,293 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:49:56,293 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:49:56,293 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:49:56,293 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:49:56,293 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:49:56,293 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:49:56,293 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:49:56,293 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:49:56,293 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:49:56,293 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:51:50,873 [INFO  IM] - <RouteServConn.cpp>|<168>|<OnClose>,onclose from route server handle=11 
+2016-04-26 22:52:06,150 [INFO  IM] - <http_msg_server.cpp>|<47>|<main>,MsgServer max files can open: 1024 
+2016-04-26 22:52:06,150 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 127.0.0.1:8400
+2016-04-26 22:52:06,150 [INFO  IM] - <DBServConn.cpp>|<82>|<init_db_serv_conn>,DB server connection index for login business: [0, 2), for other business: [2, 4)
+2016-04-26 22:52:06,150 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:52:06,150 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:52:06,150 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:52:06,150 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:52:06,150 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:52:06,150 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:52:06,150 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:52:06,150 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:52:06,150 [INFO  IM] - <RouteServConn.cpp>|<126>|<Connect>,Connecting to RouteServer 192.168.1.38:8200 
+2016-04-26 22:52:06,150 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=8200
+2016-04-26 22:52:06,150 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=7
+2016-04-26 22:52:06,150 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=8
+2016-04-26 22:52:06,150 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=9
+2016-04-26 22:52:06,150 [INFO  IM] - <DBServConn.cpp>|<187>|<OnClose>,onclose from db server handle=10
+2016-04-26 22:52:06,150 [INFO  IM] - <RouteServConn.cpp>|<155>|<OnConfirm>,connect to route server success 
+2016-04-26 22:52:10,183 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:52:10,183 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:52:10,183 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:52:10,183 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:52:10,183 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:52:10,183 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:52:10,183 [INFO  IM] - <DBServConn.cpp>|<155>|<Connect>,Connecting to DB Storage Server 192.168.1.38:10600
+2016-04-26 22:52:10,183 [INFO  IM] - <BaseSocket.cpp>|<90>|<Connect>,CBaseSocket::Connect, server_ip=192.168.1.38, port=10600
+2016-04-26 22:52:10,183 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:52:10,183 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:52:10,183 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success
+2016-04-26 22:52:10,183 [INFO  IM] - <DBServConn.cpp>|<180>|<OnConfirm>,connect to db server success

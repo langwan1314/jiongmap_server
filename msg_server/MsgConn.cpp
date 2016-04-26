@@ -422,8 +422,8 @@ void CMsgConn::HandlePdu(CImPdu* pPdu)
     case CID_BUDDY_LIST_ADD_REQUEST_USER_REQUEST:
         _HandleClientListAddUserRequest(pPdu);
         break;
-    case CID_BUDDY_LIST_DEL_REQUEST_USER_REQUEST:
-        _HandleClientDelUserRequest(pPdu);
+    case CID_BUDDY_LIST_QUERY_USER_REQUEST:
+        _HandleClientListAddUserRequest(pPdu);
         break;
     default:
         log("wrong msg, cmd id=%d, user id=%u. ", pPdu->GetCommandId(),
@@ -1154,7 +1154,7 @@ void CMsgConn::_HandleClientListAddUserRequest(CImPdu* pPdu)
     IM::Buddy::IMListAddRequestUserReq msg;
     CHECK_PB_PARSE_MSG(
             msg.ParseFromArray(pPdu->GetBodyData(), pPdu->GetBodyLength()));
-    log("_HandleClientListAddUserRequest, user_id=%u ", GetUserId());
+    log("_HandleClientListAddUserRequest-------------------------------, user_id=%u ", GetUserId());
 
     CDBServConn* pConn = get_db_serv_conn();
     if (pConn)
@@ -1167,6 +1167,23 @@ void CMsgConn::_HandleClientListAddUserRequest(CImPdu* pPdu)
     }
 }
 
+void CMsgConn::_HandleClientQueryUserRequest(CImPdu* pPdu)
+{
+    IM::Buddy::IMQueryUserReq msg;
+    CHECK_PB_PARSE_MSG(
+            msg.ParseFromArray(pPdu->GetBodyData(), pPdu->GetBodyLength()));
+    log("_HandleClientQueryUserRequest, user_id=%u ", GetUserId());
+
+    CDBServConn* pConn = get_db_serv_conn();
+    if (pConn)
+    {
+        CDbAttachData attach(ATTACH_TYPE_HANDLE, m_handle, 0);
+        msg.set_user_id(GetUserId());
+        msg.set_attach_data(attach.GetBuffer(), attach.GetLength());
+        pPdu->SetPBMsg(&msg);
+        pConn->SendPdu(pPdu);
+    }
+}
 void CMsgConn::AddToSendList(uint32_t msg_id, uint32_t from_id)
 {
     //log("AddSendMsg, seq_no=%u, from_id=%u ", seq_no, from_id);

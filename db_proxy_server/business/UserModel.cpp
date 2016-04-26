@@ -83,8 +83,7 @@ void CUserModel::getFriendsId(int id, uint32_t& nLastTime,
     if (pDBConn)
     {
         string strSql;
-        strSql = "select * from IMFriends where smallId ="
-                + int2string(id);
+        strSql = "select * from IMFriends where smallId =" + int2string(id);
         CResultSet* pResultSet = pDBConn->ExecuteQuery(strSql.c_str());
         if (pResultSet)
         {
@@ -98,8 +97,7 @@ void CUserModel::getFriendsId(int id, uint32_t& nLastTime,
         {
             log(" no result set for sql:%s", strSql.c_str());
         }
-        strSql = "select *  from IMFriends where bigId ="
-                + int2string(id);
+        strSql = "select *  from IMFriends where bigId =" + int2string(id);
         pResultSet = pDBConn->ExecuteQuery(strSql.c_str());
         if (pResultSet)
         {
@@ -164,6 +162,103 @@ void CUserModel::getUsers(list<uint32_t> lsIds,
                 cUser.set_sign_info(pResultSet->GetString("sign_info"));
 
                 cUser.set_department_id(pResultSet->GetInt("departId"));
+                cUser.set_department_id(pResultSet->GetInt("departId"));
+                cUser.set_status(pResultSet->GetInt("status"));
+                lsUsers.push_back(cUser);
+            }
+            delete pResultSet;
+        } else
+        {
+            log(" no result set for sql:%s", strSql.c_str());
+        }
+        pDBManager->RelDBConn(pDBConn);
+    } else
+    {
+        log("no db connection for teamtalk_slave");
+    }
+}
+
+void CUserModel::queryUsers(uint32_t peerId, uint32_t peer_gender,
+        string peer_nick_name, uint32_t peer_departement_id, string peer_tel,
+        uint32_t peer_status, list<IM::BaseDefine::UserInfo> &lsUsers)
+{
+    log("getUsers");
+    CDBManager* pDBManager = CDBManager::getInstance();
+    CDBConn* pDBConn = pDBManager->GetDBConn("teamtalk_slave");
+    bool flag = false;
+    if (pDBConn)
+    {
+        string strClause;
+        string strSql = "select * from IMUser ";
+        log(" peerId:%d", peerId);
+        if (peerId > 0)
+        {
+            strSql = strSql + "where id =" + int2string(peerId);
+            flag = true;
+        }
+        log(" peer_gender:%d", peer_gender);
+        if (peer_gender == 1 || peer_gender == 2)
+        {
+            if (flag)
+                strSql = strSql + " and sex =" + int2string(peer_gender);
+            else
+                strSql = strSql + "where sex =" + int2string(peer_gender);
+            flag = true;
+        }
+        log(" peer_departement_id:%d", peer_departement_id);
+        if (peer_departement_id > 0)
+        {
+            if (flag)
+                strSql = strSql + " and departId ="
+                        + int2string(peer_departement_id);
+            else
+                strSql = strSql + "where departId ="
+                        + int2string(peer_departement_id);
+            flag = true;
+        }
+        log(" peer_status:%d", peer_status);
+        if (peer_status > 0)
+        {
+            if (flag)
+                strSql = strSql + " and status =" + int2string(peer_status);
+            else
+                strSql = strSql + "where status =" + int2string(peer_status);
+            flag = true;
+        }
+        log(" peer_nick_name:%s", peer_nick_name.c_str());
+        if ( !(peer_nick_name == ""))
+        {
+            if (flag)
+                strSql = strSql + " and nick =" + peer_nick_name;
+            else
+                strSql = strSql + "where nick =" + peer_nick_name;
+            flag = true;
+        }
+        log(" peer_tel:%s", peer_tel.c_str());
+        if (!(peer_tel == ""))
+        {
+            if (flag)
+                strSql = strSql + " and phone =" + peer_tel;
+            else
+                strSql = strSql + "where phone =" + peer_tel;
+            flag = true;
+        }
+        CResultSet* pResultSet = pDBConn->ExecuteQuery(strSql.c_str());
+        log(" strSql:%s", strSql.c_str());
+        if (pResultSet)
+        {
+            while (pResultSet->Next())
+            {
+                IM::BaseDefine::UserInfo cUser;
+                cUser.set_user_id(pResultSet->GetInt("id"));
+                cUser.set_user_gender(pResultSet->GetInt("sex"));
+                cUser.set_user_nick_name(pResultSet->GetString("nick"));
+                cUser.set_user_domain(pResultSet->GetString("domain"));
+                cUser.set_user_real_name(pResultSet->GetString("name"));
+                cUser.set_user_tel(pResultSet->GetString("phone"));
+                cUser.set_email(pResultSet->GetString("email"));
+                cUser.set_avatar_url(pResultSet->GetString("avatar"));
+                cUser.set_sign_info(pResultSet->GetString("sign_info"));
                 cUser.set_department_id(pResultSet->GetInt("departId"));
                 cUser.set_status(pResultSet->GetInt("status"));
                 lsUsers.push_back(cUser);

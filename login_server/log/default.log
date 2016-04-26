@@ -1,18 +1,16 @@
-2016-04-23 22:44:43,473 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 192.168.1.38:8008
-2016-04-23 22:44:43,473 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 192.168.1.38:8100
-2016-04-23 22:44:43,473 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 192.168.1.38:8080
-2016-04-23 22:44:47,496 [INFO  IM] - <BaseSocket.cpp>|<329>|<_AcceptNewSocket>,AcceptNewSocket2, socket=9 from 192.168.1.38:39564
+2016-04-26 22:52:06,042 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 192.168.1.38:8008
+2016-04-26 22:52:06,042 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 192.168.1.38:8100
+2016-04-26 22:52:06,042 [INFO  IM] - <BaseSocket.cpp>|<81>|<Listen>,CBaseSocket::Listen on 192.168.1.38:8080
+2016-04-26 22:52:10,053 [INFO  IM] - <BaseSocket.cpp>|<329>|<_AcceptNewSocket>,AcceptNewSocket2, socket=9 from 192.168.1.38:49696
 
-2016-04-23 22:44:47,496 [INFO  IM] - <login_server.cpp>|<32>|<msg_serv_callback>,msg_server come in
-2016-04-23 22:44:47,496 [INFO  IM] - <BaseSocket.cpp>|<329>|<_AcceptNewSocket>,AcceptNewSocket2, socket=10 from 192.168.1.38:39565
+2016-04-26 22:52:10,053 [INFO  IM] - <login_server.cpp>|<32>|<msg_serv_callback>,msg_server come in
+2016-04-26 22:52:10,053 [INFO  IM] - <BaseSocket.cpp>|<329>|<_AcceptNewSocket>,AcceptNewSocket2, socket=10 from 192.168.1.38:49697
 
-2016-04-23 22:44:47,496 [INFO  IM] - <login_server.cpp>|<32>|<msg_serv_callback>,msg_server come in
-2016-04-23 22:44:47,496 [INFO  IM] - <LoginConn.cpp>|<157>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=192.168.1.38, ip_addr2=192.168.1.38, port=8010, max_conn_cnt=100000, cur_conn_cnt=0, hostname: ubuntu. 
-2016-04-23 22:44:47,496 [INFO  IM] - <LoginConn.cpp>|<157>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=192.168.1.38, ip_addr2=192.168.1.38, port=8010, max_conn_cnt=100000, cur_conn_cnt=0, hostname: ubuntu. 
-2016-04-23 22:44:49,914 [INFO  IM] - <BaseSocket.cpp>|<329>|<_AcceptNewSocket>,AcceptNewSocket2, socket=11 from 192.168.1.47:54022
+2016-04-26 22:52:10,053 [INFO  IM] - <login_server.cpp>|<32>|<msg_serv_callback>,msg_server come in
+2016-04-26 22:52:10,053 [INFO  IM] - <LoginConn.cpp>|<157>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=192.168.1.38, ip_addr2=192.168.1.38, port=8010, max_conn_cnt=100000, cur_conn_cnt=0, hostname: ubuntu. 
+2016-04-26 22:52:10,053 [INFO  IM] - <LoginConn.cpp>|<157>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=192.168.1.38, ip_addr2=192.168.1.38, port=8010, max_conn_cnt=100000, cur_conn_cnt=0, hostname: ubuntu. 
+2016-04-26 22:52:19,310 [INFO  IM] - <BaseSocket.cpp>|<329>|<_AcceptNewSocket>,AcceptNewSocket2, socket=11 from 192.168.1.45:34576
 
-2016-04-23 22:44:49,915 [INFO  IM] - <HttpConn.cpp>|<297>|<OnWriteComlete>,write complete 
-2016-04-23 22:44:49,999 [INFO  IM] - <LoginConn.cpp>|<178>|<_HandleUserCntUpdate>,ubuntu:8010, cur_cnt=1, total_cnt=1 
-2016-04-23 22:44:49,999 [INFO  IM] - <LoginConn.cpp>|<178>|<_HandleUserCntUpdate>,ubuntu:8010, cur_cnt=1, total_cnt=2 
-2016-04-23 22:44:57,120 [INFO  IM] - <LoginConn.cpp>|<178>|<_HandleUserCntUpdate>,ubuntu:8010, cur_cnt=0, total_cnt=1 
-2016-04-23 22:44:57,120 [INFO  IM] - <LoginConn.cpp>|<178>|<_HandleUserCntUpdate>,ubuntu:8010, cur_cnt=0, total_cnt=0 
+2016-04-26 22:52:19,336 [INFO  IM] - <HttpConn.cpp>|<297>|<OnWriteComlete>,write complete 
+2016-04-26 22:52:21,338 [INFO  IM] - <LoginConn.cpp>|<178>|<_HandleUserCntUpdate>,ubuntu:8010, cur_cnt=1, total_cnt=1 
+2016-04-26 22:52:21,338 [INFO  IM] - <LoginConn.cpp>|<178>|<_HandleUserCntUpdate>,ubuntu:8010, cur_cnt=1, total_cnt=2 

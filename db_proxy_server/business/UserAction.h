@@ -26,6 +26,7 @@ namespace DB_PROXY {
     void getAddUserRequest(CImPdu* pPdu, uint32_t conn_uuid);
     void getAddRequestDetail(CImPdu* pPdu, uint32_t conn_uuid);
     void deldUser(CImPdu* pPdu, uint32_t conn_uuid);
+    void queryAllUser(CImPdu* pPdu, uint32_t conn_uuid);
 };
 
 
