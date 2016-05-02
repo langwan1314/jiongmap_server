@@ -424,17 +424,25 @@ bool CUserModel::insertUserAddRequest(uint32_t user_id, uint32_t peerId,
         if (!checkhasResult(&strQuery))
         {
             string strSql =
-                    "insert into IMFriendsRequest(`req_id`,`rsp_id`,'req_info','status',`created`) values(?,?,?)";
+                    "insert into IMFriendsRequest(`req_id`,`rsp_id`,`req_info`,`status`,`created`) values(?,?,?,?,?)";
             CPrepareStatement* stmt = new CPrepareStatement();
+            log("insertUserAddRequest strSql: %s", strSql.c_str());
+            log("insertUserAddRequest req_info: %s", req_info.c_str());
             if (stmt->Init(pDBConn->GetMysql(), strSql))
             {
                 uint32_t nNow = (uint32_t) time(NULL);
                 uint32_t index = 0;
+                int status = 0;
+                log("insertUserAddRequest ok 1");
                 stmt->SetParam(index++, user_id);
                 stmt->SetParam(index++, peerId);
-                stmt->SetParam(index++, req_info.c_str());
-                stmt->SetParam(index++, 0);
+                log("insertUserAddRequest ok 2");
+                stmt->SetParam(index++, req_info);
+                log("insertUserAddRequest ok 3");
+                stmt->SetParam(index++, status);
+                log("insertUserAddRequest ok 4");
                 stmt->SetParam(index++, nNow);
+                log("insertUserAddRequest ok 5");
                 bRet = stmt->ExecuteUpdate();
 
                 if (!bRet)
@@ -444,9 +452,10 @@ bool CUserModel::insertUserAddRequest(uint32_t user_id, uint32_t peerId,
             }
             delete stmt;
             pDBManager->RelDBConn(pDBConn);
+            incAddRequestCount(user_id, peerId);
+            log("insertUserAddRequest ok");
         }
-        incAddRequestCount(user_id, peerId);
-        log("insertUserAddRequest ok");
+
     }
 
     else
@@ -555,10 +564,21 @@ bool CUserModel::insertUserFriends(uint32_t user_id1, uint32_t user_id2)
     CDBConn* pDBConn = pDBManager->GetDBConn("teamtalk_master");
     if (pDBConn)
     {
-        string strSql =
-                "insert into IMFriends(`smallId`,`bigId`,`created`) values(?,?,?)";
-        if (!checkhasResult(&strSql))
+        string strQuery;
+        if (user_id1 < user_id2)
+            strQuery = "select * from IMFriends where smallId="
+                    + int2string(user_id1) + " and bigId ="
+                    + int2string(user_id2);
+        else
+            strQuery = "select * from IMFriends where smallId="
+                    + int2string(user_id2) + " and bigId ="
+                    + int2string(user_id1);
+        "insert into IMFriends(`smallId`,`bigId`,`created`) values(?,?,?)";
+        if (!checkhasResult(&strQuery))
         {
+
+            string strSql =
+                    "insert into IMFriends(`smallId`,`bigId`,`created`) values(?,?,?)";
             CPrepareStatement* stmt = new CPrepareStatement();
             if (stmt->Init(pDBConn->GetMysql(), strSql))
             {

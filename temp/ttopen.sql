@@ -70,6 +70,7 @@ CREATE TABLE `IMFriendsRequest` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',
   `req_id` int(11) unsigned NOT NULL COMMENT '请求者',
   `rsp_id` int(11) unsigned NOT NULL COMMENT '被请求者',
+  `req_info` varchar(128) COLLATE utf8mb4_bin DEFAULT '' COMMENT '请求信息',
   `status` tinyint(2) unsigned DEFAULT '0' COMMENT '消息处理状态 0-正常，1-同意',
   `created` int(11) unsigned NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
