@@ -5971,7 +5971,11 @@ void IMSignInfoChangedNotify::Swap(IMSignInfoChangedNotify* other) {
 // ===================================================================
 
 #ifndef _MSC_VER
+const int IMAddUserReq::kUserIdFieldNumber;
 const int IMAddUserReq::kPeerIdFieldNumber;
+const int IMAddUserReq::kStatusFieldNumber;
+const int IMAddUserReq::kReqInfoFieldNumber;
+const int IMAddUserReq::kAttachDataFieldNumber;
 #endif  // !_MSC_VER
 
 IMAddUserReq::IMAddUserReq()
@@ -5991,8 +5995,13 @@ IMAddUserReq::IMAddUserReq(const IMAddUserReq& from)
 }
 
 void IMAddUserReq::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
+  user_id_ = 0u;
   peer_id_ = 0u;
+  status_ = 0u;
+  req_info_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  attach_data_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -6002,6 +6011,12 @@ IMAddUserReq::~IMAddUserReq() {
 }
 
 void IMAddUserReq::SharedDtor() {
+  if (req_info_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete req_info_;
+  }
+  if (attach_data_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete attach_data_;
+  }
   #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   if (this != &default_instance()) {
   #else
@@ -6031,7 +6046,34 @@ IMAddUserReq* IMAddUserReq::New() const {
 }
 
 void IMAddUserReq::Clear() {
-  peer_id_ = 0u;
+#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
+  &reinterpret_cast<IMAddUserReq*>(16)->f) - \
+   reinterpret_cast<char*>(16))
+
+#define ZR_(first, last) do {                              \
+    size_t f = OFFSET_OF_FIELD_(first);                    \
+    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
+    ::memset(&first, 0, n);                                \
+  } while (0)
+
+  if (_has_bits_[0 / 32] & 31) {
+    ZR_(user_id_, peer_id_);
+    status_ = 0u;
+    if (has_req_info()) {
+      if (req_info_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        req_info_->clear();
+      }
+    }
+    if (has_attach_data()) {
+      if (attach_data_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        attach_data_->clear();
+      }
+    }
+  }
+
+#undef OFFSET_OF_FIELD_
+#undef ZR_
+
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->clear();
 }
@@ -6046,17 +6088,73 @@ bool IMAddUserReq::MergePartialFromCodedStream(
       &unknown_fields_string);
   // @@protoc_insertion_point(parse_start:IM.Buddy.IMAddUserReq)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(16383);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required uint32 peer_id = 1;
+      // optional uint32 user_id = 1;
       case 1: {
         if (tag == 8) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &user_id_)));
+          set_has_user_id();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(16)) goto parse_peer_id;
+        break;
+      }
+
+      // required uint32 peer_id = 2;
+      case 2: {
+        if (tag == 16) {
+         parse_peer_id:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &peer_id_)));
           set_has_peer_id();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(24)) goto parse_status;
+        break;
+      }
+
+      // optional uint32 status = 3;
+      case 3: {
+        if (tag == 24) {
+         parse_status:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &status_)));
+          set_has_status();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(34)) goto parse_req_info;
+        break;
+      }
+
+      // optional string req_info = 4;
+      case 4: {
+        if (tag == 34) {
+         parse_req_info:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_req_info()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(162)) goto parse_attach_data;
+        break;
+      }
+
+      // optional bytes attach_data = 20;
+      case 20: {
+        if (tag == 162) {
+         parse_attach_data:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_attach_data()));
         } else {
           goto handle_unusual;
         }
@@ -6089,9 +6187,31 @@ failure:
 void IMAddUserReq::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:IM.Buddy.IMAddUserReq)
-  // required uint32 peer_id = 1;
+  // optional uint32 user_id = 1;
+  if (has_user_id()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->user_id(), output);
+  }
+
+  // required uint32 peer_id = 2;
   if (has_peer_id()) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->peer_id(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->peer_id(), output);
+  }
+
+  // optional uint32 status = 3;
+  if (has_status()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->status(), output);
+  }
+
+  // optional string req_info = 4;
+  if (has_req_info()) {
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      4, this->req_info(), output);
+  }
+
+  // optional bytes attach_data = 20;
+  if (has_attach_data()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      20, this->attach_data(), output);
   }
 
   output->WriteRaw(unknown_fields().data(),
@@ -6103,11 +6223,39 @@ int IMAddUserReq::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // required uint32 peer_id = 1;
+    // optional uint32 user_id = 1;
+    if (has_user_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->user_id());
+    }
+
+    // required uint32 peer_id = 2;
     if (has_peer_id()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::UInt32Size(
           this->peer_id());
+    }
+
+    // optional uint32 status = 3;
+    if (has_status()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->status());
+    }
+
+    // optional string req_info = 4;
+    if (has_req_info()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->req_info());
+    }
+
+    // optional bytes attach_data = 20;
+    if (has_attach_data()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::BytesSize(
+          this->attach_data());
     }
 
   }
@@ -6127,8 +6275,20 @@ void IMAddUserReq::CheckTypeAndMergeFrom(
 void IMAddUserReq::MergeFrom(const IMAddUserReq& from) {
   GOOGLE_CHECK_NE(&from, this);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_user_id()) {
+      set_user_id(from.user_id());
+    }
     if (from.has_peer_id()) {
       set_peer_id(from.peer_id());
+    }
+    if (from.has_status()) {
+      set_status(from.status());
+    }
+    if (from.has_req_info()) {
+      set_req_info(from.req_info());
+    }
+    if (from.has_attach_data()) {
+      set_attach_data(from.attach_data());
     }
   }
   mutable_unknown_fields()->append(from.unknown_fields());
@@ -6141,14 +6301,18 @@ void IMAddUserReq::CopyFrom(const IMAddUserReq& from) {
 }
 
 bool IMAddUserReq::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+  if ((_has_bits_[0] & 0x00000002) != 0x00000002) return false;
 
   return true;
 }
 
 void IMAddUserReq::Swap(IMAddUserReq* other) {
   if (other != this) {
+    std::swap(user_id_, other->user_id_);
     std::swap(peer_id_, other->peer_id_);
+    std::swap(status_, other->status_);
+    std::swap(req_info_, other->req_info_);
+    std::swap(attach_data_, other->attach_data_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.swap(other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -7382,7 +7546,7 @@ bool IMListAddRequestUserRsp::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .IM.BaseDefine.UserInfo user_list = 3;
+      // repeated .IM.BaseDefine.AddRequestInfo user_list = 3;
       case 3: {
         if (tag == 26) {
          parse_user_list:
@@ -7444,7 +7608,7 @@ void IMListAddRequestUserRsp::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->latest_update_time(), output);
   }
 
-  // repeated .IM.BaseDefine.UserInfo user_list = 3;
+  // repeated .IM.BaseDefine.AddRequestInfo user_list = 3;
   for (int i = 0; i < this->user_list_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessage(
       3, this->user_list(i), output);
@@ -7487,7 +7651,7 @@ int IMListAddRequestUserRsp::ByteSize() const {
     }
 
   }
-  // repeated .IM.BaseDefine.UserInfo user_list = 3;
+  // repeated .IM.BaseDefine.AddRequestInfo user_list = 3;
   total_size += 1 * this->user_list_size();
   for (int i = 0; i < this->user_list_size(); i++) {
     total_size +=

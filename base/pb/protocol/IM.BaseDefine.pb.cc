@@ -32,6 +32,7 @@ void protobuf_ShutdownFile_IM_2eBaseDefine_2eproto() {
   delete OfflineFileInfo::default_instance_;
   delete DepartInfo::default_instance_;
   delete PushShieldStatus::default_instance_;
+  delete AddRequestInfo::default_instance_;
 }
 
 #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
@@ -61,6 +62,7 @@ void protobuf_AddDesc_IM_2eBaseDefine_2eproto() {
   OfflineFileInfo::default_instance_ = new OfflineFileInfo();
   DepartInfo::default_instance_ = new DepartInfo();
   PushShieldStatus::default_instance_ = new PushShieldStatus();
+  AddRequestInfo::default_instance_ = new AddRequestInfo();
   IpAddr::default_instance_->InitAsDefaultInstance();
   UserInfo::default_instance_->InitAsDefaultInstance();
   ContactSessionInfo::default_instance_->InitAsDefaultInstance();
@@ -76,6 +78,7 @@ void protobuf_AddDesc_IM_2eBaseDefine_2eproto() {
   OfflineFileInfo::default_instance_->InitAsDefaultInstance();
   DepartInfo::default_instance_->InitAsDefaultInstance();
   PushShieldStatus::default_instance_->InitAsDefaultInstance();
+  AddRequestInfo::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_IM_2eBaseDefine_2eproto);
 }
 
@@ -5527,6 +5530,288 @@ void PushShieldStatus::Swap(PushShieldStatus* other) {
 
 ::std::string PushShieldStatus::GetTypeName() const {
   return "IM.BaseDefine.PushShieldStatus";
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int AddRequestInfo::kPeerIdFieldNumber;
+const int AddRequestInfo::kStatusFieldNumber;
+const int AddRequestInfo::kReqInfoFieldNumber;
+#endif  // !_MSC_VER
+
+AddRequestInfo::AddRequestInfo()
+  : ::google::protobuf::MessageLite() {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:IM.BaseDefine.AddRequestInfo)
+}
+
+void AddRequestInfo::InitAsDefaultInstance() {
+}
+
+AddRequestInfo::AddRequestInfo(const AddRequestInfo& from)
+  : ::google::protobuf::MessageLite() {
+  SharedCtor();
+  MergeFrom(from);
+  // @@protoc_insertion_point(copy_constructor:IM.BaseDefine.AddRequestInfo)
+}
+
+void AddRequestInfo::SharedCtor() {
+  ::google::protobuf::internal::GetEmptyString();
+  _cached_size_ = 0;
+  peer_id_ = 0u;
+  status_ = 0u;
+  req_info_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+AddRequestInfo::~AddRequestInfo() {
+  // @@protoc_insertion_point(destructor:IM.BaseDefine.AddRequestInfo)
+  SharedDtor();
+}
+
+void AddRequestInfo::SharedDtor() {
+  if (req_info_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete req_info_;
+  }
+  #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  if (this != &default_instance()) {
+  #else
+  if (this != default_instance_) {
+  #endif
+  }
+}
+
+void AddRequestInfo::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const AddRequestInfo& AddRequestInfo::default_instance() {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_AddDesc_IM_2eBaseDefine_2eproto();
+#else
+  if (default_instance_ == NULL) protobuf_AddDesc_IM_2eBaseDefine_2eproto();
+#endif
+  return *default_instance_;
+}
+
+AddRequestInfo* AddRequestInfo::default_instance_ = NULL;
+
+AddRequestInfo* AddRequestInfo::New() const {
+  return new AddRequestInfo;
+}
+
+void AddRequestInfo::Clear() {
+#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
+  &reinterpret_cast<AddRequestInfo*>(16)->f) - \
+   reinterpret_cast<char*>(16))
+
+#define ZR_(first, last) do {                              \
+    size_t f = OFFSET_OF_FIELD_(first);                    \
+    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
+    ::memset(&first, 0, n);                                \
+  } while (0)
+
+  if (_has_bits_[0 / 32] & 7) {
+    ZR_(peer_id_, status_);
+    if (has_req_info()) {
+      if (req_info_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        req_info_->clear();
+      }
+    }
+  }
+
+#undef OFFSET_OF_FIELD_
+#undef ZR_
+
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->clear();
+}
+
+bool AddRequestInfo::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::io::StringOutputStream unknown_fields_string(
+      mutable_unknown_fields());
+  ::google::protobuf::io::CodedOutputStream unknown_fields_stream(
+      &unknown_fields_string);
+  // @@protoc_insertion_point(parse_start:IM.BaseDefine.AddRequestInfo)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required uint32 peer_id = 2;
+      case 2: {
+        if (tag == 16) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &peer_id_)));
+          set_has_peer_id();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(24)) goto parse_status;
+        break;
+      }
+
+      // optional uint32 status = 3;
+      case 3: {
+        if (tag == 24) {
+         parse_status:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &status_)));
+          set_has_status();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(34)) goto parse_req_info;
+        break;
+      }
+
+      // optional string req_info = 4;
+      case 4: {
+        if (tag == 34) {
+         parse_req_info:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_req_info()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormatLite::SkipField(
+            input, tag, &unknown_fields_stream));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:IM.BaseDefine.AddRequestInfo)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:IM.BaseDefine.AddRequestInfo)
+  return false;
+#undef DO_
+}
+
+void AddRequestInfo::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:IM.BaseDefine.AddRequestInfo)
+  // required uint32 peer_id = 2;
+  if (has_peer_id()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->peer_id(), output);
+  }
+
+  // optional uint32 status = 3;
+  if (has_status()) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->status(), output);
+  }
+
+  // optional string req_info = 4;
+  if (has_req_info()) {
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      4, this->req_info(), output);
+  }
+
+  output->WriteRaw(unknown_fields().data(),
+                   unknown_fields().size());
+  // @@protoc_insertion_point(serialize_end:IM.BaseDefine.AddRequestInfo)
+}
+
+int AddRequestInfo::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required uint32 peer_id = 2;
+    if (has_peer_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->peer_id());
+    }
+
+    // optional uint32 status = 3;
+    if (has_status()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::UInt32Size(
+          this->status());
+    }
+
+    // optional string req_info = 4;
+    if (has_req_info()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->req_info());
+    }
+
+  }
+  total_size += unknown_fields().size();
+
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void AddRequestInfo::CheckTypeAndMergeFrom(
+    const ::google::protobuf::MessageLite& from) {
+  MergeFrom(*::google::protobuf::down_cast<const AddRequestInfo*>(&from));
+}
+
+void AddRequestInfo::MergeFrom(const AddRequestInfo& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_peer_id()) {
+      set_peer_id(from.peer_id());
+    }
+    if (from.has_status()) {
+      set_status(from.status());
+    }
+    if (from.has_req_info()) {
+      set_req_info(from.req_info());
+    }
+  }
+  mutable_unknown_fields()->append(from.unknown_fields());
+}
+
+void AddRequestInfo::CopyFrom(const AddRequestInfo& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AddRequestInfo::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+
+  return true;
+}
+
+void AddRequestInfo::Swap(AddRequestInfo* other) {
+  if (other != this) {
+    std::swap(peer_id_, other->peer_id_);
+    std::swap(status_, other->status_);
+    std::swap(req_info_, other->req_info_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.swap(other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::std::string AddRequestInfo::GetTypeName() const {
+  return "IM.BaseDefine.AddRequestInfo";
 }
 
 

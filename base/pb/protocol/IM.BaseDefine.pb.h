@@ -48,6 +48,7 @@ class ShieldStatus;
 class OfflineFileInfo;
 class DepartInfo;
 class PushShieldStatus;
+class AddRequestInfo;
 
 enum ServiceID {
   SID_LOGIN = 1,
@@ -2378,6 +2379,122 @@ class PushShieldStatus : public ::google::protobuf::MessageLite {
 
   void InitAsDefaultInstance();
   static PushShieldStatus* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class AddRequestInfo : public ::google::protobuf::MessageLite {
+ public:
+  AddRequestInfo();
+  virtual ~AddRequestInfo();
+
+  AddRequestInfo(const AddRequestInfo& from);
+
+  inline AddRequestInfo& operator=(const AddRequestInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::std::string& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::std::string* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const AddRequestInfo& default_instance();
+
+  #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  // Returns the internal default instance pointer. This function can
+  // return NULL thus should not be used by the user. This is intended
+  // for Protobuf internal code. Please use default_instance() declared
+  // above instead.
+  static inline const AddRequestInfo* internal_default_instance() {
+    return default_instance_;
+  }
+  #endif
+
+  void Swap(AddRequestInfo* other);
+
+  // implements Message ----------------------------------------------
+
+  AddRequestInfo* New() const;
+  void CheckTypeAndMergeFrom(const ::google::protobuf::MessageLite& from);
+  void CopyFrom(const AddRequestInfo& from);
+  void MergeFrom(const AddRequestInfo& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  void DiscardUnknownFields();
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+  ::std::string GetTypeName() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required uint32 peer_id = 2;
+  inline bool has_peer_id() const;
+  inline void clear_peer_id();
+  static const int kPeerIdFieldNumber = 2;
+  inline ::google::protobuf::uint32 peer_id() const;
+  inline void set_peer_id(::google::protobuf::uint32 value);
+
+  // optional uint32 status = 3;
+  inline bool has_status() const;
+  inline void clear_status();
+  static const int kStatusFieldNumber = 3;
+  inline ::google::protobuf::uint32 status() const;
+  inline void set_status(::google::protobuf::uint32 value);
+
+  // optional string req_info = 4;
+  inline bool has_req_info() const;
+  inline void clear_req_info();
+  static const int kReqInfoFieldNumber = 4;
+  inline const ::std::string& req_info() const;
+  inline void set_req_info(const ::std::string& value);
+  inline void set_req_info(const char* value);
+  inline void set_req_info(const char* value, size_t size);
+  inline ::std::string* mutable_req_info();
+  inline ::std::string* release_req_info();
+  inline void set_allocated_req_info(::std::string* req_info);
+
+  // @@protoc_insertion_point(class_scope:IM.BaseDefine.AddRequestInfo)
+ private:
+  inline void set_has_peer_id();
+  inline void clear_has_peer_id();
+  inline void set_has_status();
+  inline void clear_has_status();
+  inline void set_has_req_info();
+  inline void clear_has_req_info();
+
+  ::std::string _unknown_fields_;
+
+  ::google::protobuf::uint32 _has_bits_[1];
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 peer_id_;
+  ::google::protobuf::uint32 status_;
+  ::std::string* req_info_;
+  #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  friend void  protobuf_AddDesc_IM_2eBaseDefine_2eproto_impl();
+  #else
+  friend void  protobuf_AddDesc_IM_2eBaseDefine_2eproto();
+  #endif
+  friend void protobuf_AssignDesc_IM_2eBaseDefine_2eproto();
+  friend void protobuf_ShutdownFile_IM_2eBaseDefine_2eproto();
+
+  void InitAsDefaultInstance();
+  static AddRequestInfo* default_instance_;
 };
 // ===================================================================
 
@@ -5050,6 +5167,134 @@ inline void PushShieldStatus::set_shield_status(::google::protobuf::uint32 value
   set_has_shield_status();
   shield_status_ = value;
   // @@protoc_insertion_point(field_set:IM.BaseDefine.PushShieldStatus.shield_status)
+}
+
+// -------------------------------------------------------------------
+
+// AddRequestInfo
+
+// required uint32 peer_id = 2;
+inline bool AddRequestInfo::has_peer_id() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void AddRequestInfo::set_has_peer_id() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void AddRequestInfo::clear_has_peer_id() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void AddRequestInfo::clear_peer_id() {
+  peer_id_ = 0u;
+  clear_has_peer_id();
+}
+inline ::google::protobuf::uint32 AddRequestInfo::peer_id() const {
+  // @@protoc_insertion_point(field_get:IM.BaseDefine.AddRequestInfo.peer_id)
+  return peer_id_;
+}
+inline void AddRequestInfo::set_peer_id(::google::protobuf::uint32 value) {
+  set_has_peer_id();
+  peer_id_ = value;
+  // @@protoc_insertion_point(field_set:IM.BaseDefine.AddRequestInfo.peer_id)
+}
+
+// optional uint32 status = 3;
+inline bool AddRequestInfo::has_status() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void AddRequestInfo::set_has_status() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void AddRequestInfo::clear_has_status() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void AddRequestInfo::clear_status() {
+  status_ = 0u;
+  clear_has_status();
+}
+inline ::google::protobuf::uint32 AddRequestInfo::status() const {
+  // @@protoc_insertion_point(field_get:IM.BaseDefine.AddRequestInfo.status)
+  return status_;
+}
+inline void AddRequestInfo::set_status(::google::protobuf::uint32 value) {
+  set_has_status();
+  status_ = value;
+  // @@protoc_insertion_point(field_set:IM.BaseDefine.AddRequestInfo.status)
+}
+
+// optional string req_info = 4;
+inline bool AddRequestInfo::has_req_info() const {
+  return (_has_bits_[0] & 0x00000004u) != 0;
+}
+inline void AddRequestInfo::set_has_req_info() {
+  _has_bits_[0] |= 0x00000004u;
+}
+inline void AddRequestInfo::clear_has_req_info() {
+  _has_bits_[0] &= ~0x00000004u;
+}
+inline void AddRequestInfo::clear_req_info() {
+  if (req_info_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    req_info_->clear();
+  }
+  clear_has_req_info();
+}
+inline const ::std::string& AddRequestInfo::req_info() const {
+  // @@protoc_insertion_point(field_get:IM.BaseDefine.AddRequestInfo.req_info)
+  return *req_info_;
+}
+inline void AddRequestInfo::set_req_info(const ::std::string& value) {
+  set_has_req_info();
+  if (req_info_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    req_info_ = new ::std::string;
+  }
+  req_info_->assign(value);
+  // @@protoc_insertion_point(field_set:IM.BaseDefine.AddRequestInfo.req_info)
+}
+inline void AddRequestInfo::set_req_info(const char* value) {
+  set_has_req_info();
+  if (req_info_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    req_info_ = new ::std::string;
+  }
+  req_info_->assign(value);
+  // @@protoc_insertion_point(field_set_char:IM.BaseDefine.AddRequestInfo.req_info)
+}
+inline void AddRequestInfo::set_req_info(const char* value, size_t size) {
+  set_has_req_info();
+  if (req_info_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    req_info_ = new ::std::string;
+  }
+  req_info_->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:IM.BaseDefine.AddRequestInfo.req_info)
+}
+inline ::std::string* AddRequestInfo::mutable_req_info() {
+  set_has_req_info();
+  if (req_info_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    req_info_ = new ::std::string;
+  }
+  // @@protoc_insertion_point(field_mutable:IM.BaseDefine.AddRequestInfo.req_info)
+  return req_info_;
+}
+inline ::std::string* AddRequestInfo::release_req_info() {
+  clear_has_req_info();
+  if (req_info_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    return NULL;
+  } else {
+    ::std::string* temp = req_info_;
+    req_info_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    return temp;
+  }
+}
+inline void AddRequestInfo::set_allocated_req_info(::std::string* req_info) {
+  if (req_info_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete req_info_;
+  }
+  if (req_info) {
+    set_has_req_info();
+    req_info_ = req_info;
+  } else {
+    clear_has_req_info();
+    req_info_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  // @@protoc_insertion_point(field_set_allocated:IM.BaseDefine.AddRequestInfo.req_info)
 }
 
 

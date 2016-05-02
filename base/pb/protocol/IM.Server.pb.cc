@@ -5427,6 +5427,7 @@ void IMFileServerIPRsp::Swap(IMFileServerIPRsp* other) {
 const int IMAddUserReq::kUserIdFieldNumber;
 const int IMAddUserReq::kPeerIdFieldNumber;
 const int IMAddUserReq::kStatusFieldNumber;
+const int IMAddUserReq::kReqInfoFieldNumber;
 const int IMAddUserReq::kAttachDataFieldNumber;
 #endif  // !_MSC_VER
 
@@ -5452,6 +5453,7 @@ void IMAddUserReq::SharedCtor() {
   user_id_ = 0u;
   peer_id_ = 0u;
   status_ = 0u;
+  req_info_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   attach_data_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
@@ -5462,6 +5464,9 @@ IMAddUserReq::~IMAddUserReq() {
 }
 
 void IMAddUserReq::SharedDtor() {
+  if (req_info_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete req_info_;
+  }
   if (attach_data_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
     delete attach_data_;
   }
@@ -5504,9 +5509,14 @@ void IMAddUserReq::Clear() {
     ::memset(&first, 0, n);                                \
   } while (0)
 
-  if (_has_bits_[0 / 32] & 15) {
+  if (_has_bits_[0 / 32] & 31) {
     ZR_(user_id_, peer_id_);
     status_ = 0u;
+    if (has_req_info()) {
+      if (req_info_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+        req_info_->clear();
+      }
+    }
     if (has_attach_data()) {
       if (attach_data_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         attach_data_->clear();
@@ -5575,6 +5585,19 @@ bool IMAddUserReq::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
+        if (input->ExpectTag(34)) goto parse_req_info;
+        break;
+      }
+
+      // optional string req_info = 4;
+      case 4: {
+        if (tag == 34) {
+         parse_req_info:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_req_info()));
+        } else {
+          goto handle_unusual;
+        }
         if (input->ExpectTag(162)) goto parse_attach_data;
         break;
       }
@@ -5632,6 +5655,12 @@ void IMAddUserReq::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->status(), output);
   }
 
+  // optional string req_info = 4;
+  if (has_req_info()) {
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      4, this->req_info(), output);
+  }
+
   // optional bytes attach_data = 20;
   if (has_attach_data()) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
@@ -5668,6 +5697,13 @@ int IMAddUserReq::ByteSize() const {
           this->status());
     }
 
+    // optional string req_info = 4;
+    if (has_req_info()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->req_info());
+    }
+
     // optional bytes attach_data = 20;
     if (has_attach_data()) {
       total_size += 2 +
@@ -5701,6 +5737,9 @@ void IMAddUserReq::MergeFrom(const IMAddUserReq& from) {
     if (from.has_status()) {
       set_status(from.status());
     }
+    if (from.has_req_info()) {
+      set_req_info(from.req_info());
+    }
     if (from.has_attach_data()) {
       set_attach_data(from.attach_data());
     }
@@ -5725,6 +5764,7 @@ void IMAddUserReq::Swap(IMAddUserReq* other) {
     std::swap(user_id_, other->user_id_);
     std::swap(peer_id_, other->peer_id_);
     std::swap(status_, other->status_);
+    std::swap(req_info_, other->req_info_);
     std::swap(attach_data_, other->attach_data_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.swap(other->_unknown_fields_);

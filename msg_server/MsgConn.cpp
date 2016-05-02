@@ -1039,7 +1039,6 @@ void CMsgConn::_HandleClientDeviceToken(CImPdu *pPdu)
 void CMsgConn::_HandleClientAddUserRequest(CImPdu* pPdu)
 {
     IM::Buddy::IMAddUserReq msg;
-    IM::Server::IMAddUserReq msg2;
     log("_HandleClientAddUserRequest. ");
     CHECK_PB_PARSE_MSG(
             msg.ParseFromArray(pPdu->GetBodyData(), pPdu->GetBodyLength()));
@@ -1068,12 +1067,9 @@ void CMsgConn::_HandleClientAddUserRequest(CImPdu* pPdu)
     if (pConn)
     {
         CDbAttachData attach(ATTACH_TYPE_HANDLE, m_handle, 0);
-        msg2.set_user_id(GetUserId());
-        msg2.set_attach_data(attach.GetBuffer(), attach.GetLength());
-        msg2.set_user_id(GetUserId());
-        msg2.set_peer_id(peer_id);
-        msg2.set_status(status);
-        pPdu->SetPBMsg(&msg2);
+        msg.set_user_id(GetUserId());
+        msg.set_attach_data(attach.GetBuffer(), attach.GetLength());
+        pPdu->SetPBMsg(&msg);
         pConn->SendPdu(pPdu);
     }
 }

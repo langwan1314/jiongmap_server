@@ -37,14 +37,17 @@ public:
     bool getUserSingInfo(uint32_t user_id, string* sign_info);
     bool updatePushShield(uint32_t user_id, uint32_t shield_status);
     bool getPushShield(uint32_t user_id, uint32_t* shield_status);
-    bool insertUserAddRequest(uint32_t user_id, uint32_t peerId);
+    bool insertUserAddRequest(uint32_t user_id, uint32_t peerId,
+            string req_info);
     bool incAddRequestCount(uint32_t nFromId, uint32_t nToId);
     int getAddRequestCount(uint32_t peerId);
     bool insertUserFriends(uint32_t user_id, uint32_t peerId);
     bool delUserFriends(uint32_t user_id, uint32_t peerId);
-    int getAddRequestDetail(int nToId, list<IM::BaseDefine::UserInfo> &lsUsers);
-    void queryUsers(uint32_t peerId,uint32_t peer_gender,string peer_nick_name,uint32_t peer_departement_id,string peer_tel,
-            uint32_t peer_status, list<IM::BaseDefine::UserInfo> &lsUsers);
+    int getAddRequestDetail(int nToId, list<IM::BaseDefine::AddRequestInfo> &lsUsers);
+    void queryUsers(uint32_t peerId, uint32_t peer_gender,
+            string peer_nick_name, uint32_t peer_departement_id,
+            string peer_tel, uint32_t peer_status,
+            list<IM::BaseDefine::UserInfo> &lsUsers);
     bool checkhasResult(string* sql);
 
 private:

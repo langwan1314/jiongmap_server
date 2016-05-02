@@ -2446,6 +2446,18 @@ class IMAddUserReq : public ::google::protobuf::MessageLite {
   inline ::google::protobuf::uint32 status() const;
   inline void set_status(::google::protobuf::uint32 value);
 
+  // optional string req_info = 4;
+  inline bool has_req_info() const;
+  inline void clear_req_info();
+  static const int kReqInfoFieldNumber = 4;
+  inline const ::std::string& req_info() const;
+  inline void set_req_info(const ::std::string& value);
+  inline void set_req_info(const char* value);
+  inline void set_req_info(const char* value, size_t size);
+  inline ::std::string* mutable_req_info();
+  inline ::std::string* release_req_info();
+  inline void set_allocated_req_info(::std::string* req_info);
+
   // optional bytes attach_data = 20;
   inline bool has_attach_data() const;
   inline void clear_attach_data();
@@ -2466,6 +2478,8 @@ class IMAddUserReq : public ::google::protobuf::MessageLite {
   inline void clear_has_peer_id();
   inline void set_has_status();
   inline void clear_has_status();
+  inline void set_has_req_info();
+  inline void clear_has_req_info();
   inline void set_has_attach_data();
   inline void clear_has_attach_data();
 
@@ -2475,6 +2489,7 @@ class IMAddUserReq : public ::google::protobuf::MessageLite {
   mutable int _cached_size_;
   ::google::protobuf::uint32 user_id_;
   ::google::protobuf::uint32 peer_id_;
+  ::std::string* req_info_;
   ::std::string* attach_data_;
   ::google::protobuf::uint32 status_;
   #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
@@ -5104,15 +5119,91 @@ inline void IMAddUserReq::set_status(::google::protobuf::uint32 value) {
   // @@protoc_insertion_point(field_set:IM.Server.IMAddUserReq.status)
 }
 
-// optional bytes attach_data = 20;
-inline bool IMAddUserReq::has_attach_data() const {
+// optional string req_info = 4;
+inline bool IMAddUserReq::has_req_info() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
-inline void IMAddUserReq::set_has_attach_data() {
+inline void IMAddUserReq::set_has_req_info() {
   _has_bits_[0] |= 0x00000008u;
 }
-inline void IMAddUserReq::clear_has_attach_data() {
+inline void IMAddUserReq::clear_has_req_info() {
   _has_bits_[0] &= ~0x00000008u;
+}
+inline void IMAddUserReq::clear_req_info() {
+  if (req_info_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    req_info_->clear();
+  }
+  clear_has_req_info();
+}
+inline const ::std::string& IMAddUserReq::req_info() const {
+  // @@protoc_insertion_point(field_get:IM.Server.IMAddUserReq.req_info)
+  return *req_info_;
+}
+inline void IMAddUserReq::set_req_info(const ::std::string& value) {
+  set_has_req_info();
+  if (req_info_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    req_info_ = new ::std::string;
+  }
+  req_info_->assign(value);
+  // @@protoc_insertion_point(field_set:IM.Server.IMAddUserReq.req_info)
+}
+inline void IMAddUserReq::set_req_info(const char* value) {
+  set_has_req_info();
+  if (req_info_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    req_info_ = new ::std::string;
+  }
+  req_info_->assign(value);
+  // @@protoc_insertion_point(field_set_char:IM.Server.IMAddUserReq.req_info)
+}
+inline void IMAddUserReq::set_req_info(const char* value, size_t size) {
+  set_has_req_info();
+  if (req_info_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    req_info_ = new ::std::string;
+  }
+  req_info_->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:IM.Server.IMAddUserReq.req_info)
+}
+inline ::std::string* IMAddUserReq::mutable_req_info() {
+  set_has_req_info();
+  if (req_info_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    req_info_ = new ::std::string;
+  }
+  // @@protoc_insertion_point(field_mutable:IM.Server.IMAddUserReq.req_info)
+  return req_info_;
+}
+inline ::std::string* IMAddUserReq::release_req_info() {
+  clear_has_req_info();
+  if (req_info_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    return NULL;
+  } else {
+    ::std::string* temp = req_info_;
+    req_info_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    return temp;
+  }
+}
+inline void IMAddUserReq::set_allocated_req_info(::std::string* req_info) {
+  if (req_info_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
+    delete req_info_;
+  }
+  if (req_info) {
+    set_has_req_info();
+    req_info_ = req_info;
+  } else {
+    clear_has_req_info();
+    req_info_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  // @@protoc_insertion_point(field_set_allocated:IM.Server.IMAddUserReq.req_info)
+}
+
+// optional bytes attach_data = 20;
+inline bool IMAddUserReq::has_attach_data() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
+}
+inline void IMAddUserReq::set_has_attach_data() {
+  _has_bits_[0] |= 0x00000010u;
+}
+inline void IMAddUserReq::clear_has_attach_data() {
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline void IMAddUserReq::clear_attach_data() {
   if (attach_data_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {

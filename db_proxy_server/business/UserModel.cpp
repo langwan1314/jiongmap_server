@@ -226,7 +226,7 @@ void CUserModel::queryUsers(uint32_t peerId, uint32_t peer_gender,
             flag = true;
         }
         log(" peer_nick_name:%s", peer_nick_name.c_str());
-        if ( !(peer_nick_name == ""))
+        if (!(peer_nick_name == ""))
         {
             if (flag)
                 strSql = strSql + " and nick =" + peer_nick_name;
@@ -411,7 +411,8 @@ bool CUserModel::checkhasResult(string *sql)
     return false;
 }
 
-bool CUserModel::insertUserAddRequest(uint32_t user_id, uint32_t peerId)
+bool CUserModel::insertUserAddRequest(uint32_t user_id, uint32_t peerId,
+        string req_info)
 {
     bool bRet = false;
     CDBManager* pDBManager = CDBManager::getInstance();
@@ -423,7 +424,7 @@ bool CUserModel::insertUserAddRequest(uint32_t user_id, uint32_t peerId)
         if (!checkhasResult(&strQuery))
         {
             string strSql =
-                    "insert into IMFriendsRequest(`req_id`,`rsp_id`,`created`) values(?,?,?)";
+                    "insert into IMFriendsRequest(`req_id`,`rsp_id`,'req_info','status',`created`) values(?,?,?)";
             CPrepareStatement* stmt = new CPrepareStatement();
             if (stmt->Init(pDBConn->GetMysql(), strSql))
             {
@@ -431,6 +432,8 @@ bool CUserModel::insertUserAddRequest(uint32_t user_id, uint32_t peerId)
                 uint32_t index = 0;
                 stmt->SetParam(index++, user_id);
                 stmt->SetParam(index++, peerId);
+                stmt->SetParam(index++, req_info.c_str());
+                stmt->SetParam(index++, 0);
                 stmt->SetParam(index++, nNow);
                 bRet = stmt->ExecuteUpdate();
 
@@ -491,7 +494,7 @@ int CUserModel::getAddRequestCount(uint32_t nToId)
 }
 
 int CUserModel::getAddRequestDetail(int user_id,
-        list<IM::BaseDefine::UserInfo> &lsUsers)
+        list<IM::BaseDefine::AddRequestInfo> &lsUsers)
 {
     bool bRet = false;
     CDBManager* pDBManager = CDBManager::getInstance();
@@ -503,42 +506,34 @@ int CUserModel::getAddRequestDetail(int user_id,
                 + int2string(user_id);
         CResultSet* pResultSet = pDBConn->ExecuteQuery(strSql.c_str());
 
+//        if (pResultSet)
+//        {
+//            bool bFirst = true;
+//            while (pResultSet->Next())
+//            {
+//                if (bFirst)
+//                {
+//                    bFirst = false;
+//                    strClause += int2string(pResultSet->GetInt("req_id"));
+//                } else
+//                {
+//                    strClause +=
+//                            ("," + int2string(pResultSet->GetInt("req_id")));
+//                }
+//
+//            }
+//            log("strClause = %s", strClause.c_str());
+//        }
+//        strSql = "select * from IMUser where id in (" + strClause + ")";
+//        pResultSet = pDBConn->ExecuteQuery(strSql.c_str());
         if (pResultSet)
         {
-            bool bFirst = true;
             while (pResultSet->Next())
             {
-                if (bFirst)
-                {
-                    bFirst = false;
-                    strClause += int2string(pResultSet->GetInt("req_id"));
-                } else
-                {
-                    strClause +=
-                            ("," + int2string(pResultSet->GetInt("req_id")));
-                }
-
-            }
-            log("strClause = %s", strClause.c_str());
-        }
-        strSql = "select * from IMUser where id in (" + strClause + ")";
-        pResultSet = pDBConn->ExecuteQuery(strSql.c_str());
-        if (pResultSet)
-        {
-            while (pResultSet->Next())
-            {
-                IM::BaseDefine::UserInfo cUser;
-                cUser.set_user_id(pResultSet->GetInt("id"));
-                cUser.set_user_gender(pResultSet->GetInt("sex"));
-                cUser.set_user_nick_name(pResultSet->GetString("nick"));
-                cUser.set_user_domain(pResultSet->GetString("domain"));
-                cUser.set_user_real_name(pResultSet->GetString("name"));
-                cUser.set_user_tel(pResultSet->GetString("phone"));
-                cUser.set_email(pResultSet->GetString("email"));
-                cUser.set_avatar_url(pResultSet->GetString("avatar"));
-                cUser.set_sign_info(pResultSet->GetString("sign_info"));
-                cUser.set_department_id(pResultSet->GetInt("departId"));
+                IM::BaseDefine::AddRequestInfo cUser;
+                cUser.set_peer_id(pResultSet->GetInt("req_id"));
                 cUser.set_status(pResultSet->GetInt("status"));
+                cUser.set_req_info(pResultSet->GetString("req_info"));
                 lsUsers.push_back(cUser);
             }
             delete pResultSet;
