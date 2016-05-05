@@ -503,7 +503,8 @@ int CUserModel::getAddRequestCount(uint32_t nToId)
 }
 
 int CUserModel::getAddRequestDetail(int user_id,
-        list<IM::BaseDefine::AddRequestInfo> &lsUsers)
+        list<IM::BaseDefine::AddRequestInfo> &lsReqs,
+        list<IM::BaseDefine::UserInfo> &lsUsers)
 {
     bool bRet = false;
     CDBManager* pDBManager = CDBManager::getInstance();
@@ -537,20 +538,61 @@ int CUserModel::getAddRequestDetail(int user_id,
 //        pResultSet = pDBConn->ExecuteQuery(strSql.c_str());
         if (pResultSet)
         {
+            bool bFirst = true;
             while (pResultSet->Next())
             {
-                IM::BaseDefine::AddRequestInfo cUser;
-                cUser.set_peer_id(pResultSet->GetInt("req_id"));
-                cUser.set_status(pResultSet->GetInt("status"));
-                cUser.set_req_info(pResultSet->GetString("req_info"));
-                lsUsers.push_back(cUser);
+                IM::BaseDefine::AddRequestInfo cReq;
+                cReq.set_peer_id(pResultSet->GetInt("req_id"));
+                cReq.set_status(pResultSet->GetInt("status"));
+                cReq.set_req_info(pResultSet->GetString("req_info"));
+                lsReqs.push_back(cReq);
+                if (bFirst)
+                {
+                    bFirst = false;
+                    strClause += int2string(cReq.peer_id());
+                } else
+                {
+                    strClause += ("," + int2string(cReq.peer_id()));
+                }
+
             }
-            delete pResultSet;
+            log("strClause = %s", strClause.c_str());
+            string strSql = "select * from IMUser where id in (" + strClause
+                    + ")";
+            log("  sql:%s", strSql.c_str());
+            pResultSet = pDBConn->ExecuteQuery(strSql.c_str());
+            log("  sql2:%s", strSql.c_str());
+            if (pResultSet)
+            {
+                log("  sql3:%s", strSql.c_str());
+                while (pResultSet->Next())
+                {
+                    log("  sql4:%s", strSql.c_str());
+                    IM::BaseDefine::UserInfo cUser;
+                    cUser.set_user_id(pResultSet->GetInt("id"));
+                    cUser.set_user_gender(pResultSet->GetInt("sex"));
+                    cUser.set_user_nick_name(pResultSet->GetString("nick"));
+                    cUser.set_user_domain(pResultSet->GetString("domain"));
+                    cUser.set_user_real_name(pResultSet->GetString("name"));
+                    cUser.set_user_tel(pResultSet->GetString("phone"));
+                    cUser.set_email(pResultSet->GetString("email"));
+                    cUser.set_avatar_url(pResultSet->GetString("avatar"));
+                    cUser.set_department_id(pResultSet->GetInt("departId"));
+                    cUser.set_status(pResultSet->GetInt("status"));
+                    lsUsers.push_back(cUser);
+                    log("  sql5:%s", strSql.c_str());
+                }
+            } else
+            {
+                log(" no result set for sql:%s", strSql.c_str());
+            }
         } else
         {
             log(" no result set for sql:%s", strSql.c_str());
         }
         pDBManager->RelDBConn(pDBConn);
+        log("  sql7:%s", strSql.c_str());
+        delete pResultSet;
     } else
     {
         log("no cache connection for unread");

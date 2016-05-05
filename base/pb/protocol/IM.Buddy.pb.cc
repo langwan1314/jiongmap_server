@@ -7409,6 +7409,7 @@ void IMListAddRequestUserReq::Swap(IMListAddRequestUserReq* other) {
 #ifndef _MSC_VER
 const int IMListAddRequestUserRsp::kUserIdFieldNumber;
 const int IMListAddRequestUserRsp::kLatestUpdateTimeFieldNumber;
+const int IMListAddRequestUserRsp::kUserReqListFieldNumber;
 const int IMListAddRequestUserRsp::kUserListFieldNumber;
 const int IMListAddRequestUserRsp::kAttachDataFieldNumber;
 #endif  // !_MSC_VER
@@ -7486,7 +7487,7 @@ void IMListAddRequestUserRsp::Clear() {
     ::memset(&first, 0, n);                                \
   } while (0)
 
-  if (_has_bits_[0 / 32] & 11) {
+  if (_has_bits_[0 / 32] & 19) {
     ZR_(user_id_, latest_update_time_);
     if (has_attach_data()) {
       if (attach_data_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
@@ -7498,6 +7499,7 @@ void IMListAddRequestUserRsp::Clear() {
 #undef OFFSET_OF_FIELD_
 #undef ZR_
 
+  user_req_list_.Clear();
   user_list_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->clear();
@@ -7542,20 +7544,34 @@ bool IMListAddRequestUserRsp::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_user_list;
+        if (input->ExpectTag(26)) goto parse_user_req_list;
         break;
       }
 
-      // repeated .IM.BaseDefine.AddRequestInfo user_list = 3;
+      // repeated .IM.BaseDefine.AddRequestInfo user_req_list = 3;
       case 3: {
         if (tag == 26) {
+         parse_user_req_list:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_user_req_list()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(26)) goto parse_user_req_list;
+        if (input->ExpectTag(34)) goto parse_user_list;
+        break;
+      }
+
+      // repeated .IM.BaseDefine.UserInfo user_list = 4;
+      case 4: {
+        if (tag == 34) {
          parse_user_list:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_user_list()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_user_list;
+        if (input->ExpectTag(34)) goto parse_user_list;
         if (input->ExpectTag(162)) goto parse_attach_data;
         break;
       }
@@ -7608,10 +7624,16 @@ void IMListAddRequestUserRsp::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->latest_update_time(), output);
   }
 
-  // repeated .IM.BaseDefine.AddRequestInfo user_list = 3;
+  // repeated .IM.BaseDefine.AddRequestInfo user_req_list = 3;
+  for (int i = 0; i < this->user_req_list_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessage(
+      3, this->user_req_list(i), output);
+  }
+
+  // repeated .IM.BaseDefine.UserInfo user_list = 4;
   for (int i = 0; i < this->user_list_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessage(
-      3, this->user_list(i), output);
+      4, this->user_list(i), output);
   }
 
   // optional bytes attach_data = 20;
@@ -7651,7 +7673,15 @@ int IMListAddRequestUserRsp::ByteSize() const {
     }
 
   }
-  // repeated .IM.BaseDefine.AddRequestInfo user_list = 3;
+  // repeated .IM.BaseDefine.AddRequestInfo user_req_list = 3;
+  total_size += 1 * this->user_req_list_size();
+  for (int i = 0; i < this->user_req_list_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->user_req_list(i));
+  }
+
+  // repeated .IM.BaseDefine.UserInfo user_list = 4;
   total_size += 1 * this->user_list_size();
   for (int i = 0; i < this->user_list_size(); i++) {
     total_size +=
@@ -7674,6 +7704,7 @@ void IMListAddRequestUserRsp::CheckTypeAndMergeFrom(
 
 void IMListAddRequestUserRsp::MergeFrom(const IMListAddRequestUserRsp& from) {
   GOOGLE_CHECK_NE(&from, this);
+  user_req_list_.MergeFrom(from.user_req_list_);
   user_list_.MergeFrom(from.user_list_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_user_id()) {
@@ -7697,6 +7728,7 @@ void IMListAddRequestUserRsp::CopyFrom(const IMListAddRequestUserRsp& from) {
 
 bool IMListAddRequestUserRsp::IsInitialized() const {
 
+  if (!::google::protobuf::internal::AllAreInitialized(this->user_req_list())) return false;
   if (!::google::protobuf::internal::AllAreInitialized(this->user_list())) return false;
   return true;
 }
@@ -7705,6 +7737,7 @@ void IMListAddRequestUserRsp::Swap(IMListAddRequestUserRsp* other) {
   if (other != this) {
     std::swap(user_id_, other->user_id_);
     std::swap(latest_update_time_, other->latest_update_time_);
+    user_req_list_.Swap(&other->user_req_list_);
     user_list_.Swap(&other->user_list_);
     std::swap(attach_data_, other->attach_data_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);

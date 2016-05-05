@@ -71,7 +71,7 @@ CREATE TABLE `IMFriendsRequest` (
   `req_id` int(11) unsigned NOT NULL COMMENT '请求者',
   `rsp_id` int(11) unsigned NOT NULL COMMENT '被请求者',
   `req_info` varchar(128) COLLATE utf8mb4_bin DEFAULT '' COMMENT '请求信息',
-  `status` tinyint(2) unsigned DEFAULT '0' COMMENT '消息处理状态 0-正常，1-同意',
+  `status` tinyint(2) unsigned DEFAULT '0' COMMENT '消息处理状态 0-请求中，1-已同意',
   `created` int(11) unsigned NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
@@ -582,6 +582,6 @@ CREATE TABLE `IMRelationShip` (
   KEY `idx_smallId_bigId_status_updated` (`smallId`,`bigId`,`status`,`updated`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-DROP USER  'jiongmap'@'localhost'; 
-CREATE USER 'jiongmap'@'localhost' IDENTIFIED BY 'jiongmap@leaves'; 
-GRANT ALL ON db_jiongmap.* TO 'jiongmap'@'localhost'; 
+DROP USER  'jiongmap'@'localhost';
+CREATE USER 'jiongmap'@'localhost' IDENTIFIED BY 'jiongmap@leaves';
+GRANT ALL ON db_jiongmap.* TO 'jiongmap'@'localhost';

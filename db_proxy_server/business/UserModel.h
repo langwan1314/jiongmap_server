@@ -43,7 +43,9 @@ public:
     int getAddRequestCount(uint32_t peerId);
     bool insertUserFriends(uint32_t user_id, uint32_t peerId);
     bool delUserFriends(uint32_t user_id, uint32_t peerId);
-    int getAddRequestDetail(int nToId, list<IM::BaseDefine::AddRequestInfo> &lsUsers);
+    int getAddRequestDetail(int user_id,
+            list<IM::BaseDefine::AddRequestInfo> &lsReqs,
+            list<IM::BaseDefine::UserInfo> &lsUsers);
     void queryUsers(uint32_t peerId, uint32_t peer_gender,
             string peer_nick_name, uint32_t peer_departement_id,
             string peer_tel, uint32_t peer_status,

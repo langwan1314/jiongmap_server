@@ -286,16 +286,41 @@ void getAddRequestDetail(CImPdu* pPdu, uint32_t conn_uuid)
         uint32_t nReqId = msg.user_id();
         log("nReqId = %d", nReqId);
         list<IM::BaseDefine::UserInfo> lsUsers;
-        list<IM::BaseDefine::AddRequestInfo> lsAddUsers;
-        CUserModel::getInstance()->getAddRequestDetail(nReqId, lsAddUsers);
+        list<IM::BaseDefine::AddRequestInfo> lsReq;
+        list<IM::BaseDefine::UserInfo> lsAddUsers;
+        CUserModel::getInstance()->getAddRequestDetail(nReqId, lsReq,
+                lsAddUsers);
+        log("nReqId 2 = %d", nReqId);
         msgResp.set_user_id(nReqId);
-        for (list<IM::BaseDefine::AddRequestInfo>::iterator it =
-                lsAddUsers.begin(); it != lsAddUsers.end(); ++it)
+        log("nReqId 3 = %d", nReqId);
+        for (list<IM::BaseDefine::AddRequestInfo>::iterator it = lsReq.begin();
+                it != lsReq.end(); ++it)
         {
-            IM::BaseDefine::AddRequestInfo* pUser = msgResp.add_user_list();
+            log("nReqId 4 = %d", nReqId);
+            IM::BaseDefine::AddRequestInfo* pUser = msgResp.add_user_req_list();
             //            *pUser = *it;
+            log("nReqId 5 = %d", nReqId);
             pUser->set_peer_id(it->peer_id());
             pUser->set_req_info(it->req_info());
+            pUser->set_status(it->status());
+            log("nReqId 6 = %d", nReqId);
+        }
+        log("nReqId 2 = %d", nReqId);
+        for (list<IM::BaseDefine::UserInfo>::iterator it = lsAddUsers.begin();
+                it != lsAddUsers.end(); ++it)
+        {
+            IM::BaseDefine::UserInfo* pUser = msgResp.add_user_list();
+            //            *pUser = *it;
+            pUser->set_user_id(it->user_id());
+            pUser->set_user_gender(it->user_gender());
+            pUser->set_user_nick_name(it->user_nick_name());
+            pUser->set_avatar_url(it->avatar_url());
+            pUser->set_sign_info(it->sign_info());
+            pUser->set_department_id(it->department_id());
+            pUser->set_email(it->email());
+            pUser->set_user_real_name(it->user_real_name());
+            pUser->set_user_tel(it->user_tel());
+            pUser->set_user_domain(it->user_domain());
             pUser->set_status(it->status());
         }
         log("userId=%u, userCnt=%u", nReqId, msgResp.user_list_size());

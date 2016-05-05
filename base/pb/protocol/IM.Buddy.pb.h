@@ -3208,16 +3208,28 @@ class IMListAddRequestUserRsp : public ::google::protobuf::MessageLite {
   inline ::google::protobuf::uint32 latest_update_time() const;
   inline void set_latest_update_time(::google::protobuf::uint32 value);
 
-  // repeated .IM.BaseDefine.AddRequestInfo user_list = 3;
+  // repeated .IM.BaseDefine.AddRequestInfo user_req_list = 3;
+  inline int user_req_list_size() const;
+  inline void clear_user_req_list();
+  static const int kUserReqListFieldNumber = 3;
+  inline const ::IM::BaseDefine::AddRequestInfo& user_req_list(int index) const;
+  inline ::IM::BaseDefine::AddRequestInfo* mutable_user_req_list(int index);
+  inline ::IM::BaseDefine::AddRequestInfo* add_user_req_list();
+  inline const ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::AddRequestInfo >&
+      user_req_list() const;
+  inline ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::AddRequestInfo >*
+      mutable_user_req_list();
+
+  // repeated .IM.BaseDefine.UserInfo user_list = 4;
   inline int user_list_size() const;
   inline void clear_user_list();
-  static const int kUserListFieldNumber = 3;
-  inline const ::IM::BaseDefine::AddRequestInfo& user_list(int index) const;
-  inline ::IM::BaseDefine::AddRequestInfo* mutable_user_list(int index);
-  inline ::IM::BaseDefine::AddRequestInfo* add_user_list();
-  inline const ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::AddRequestInfo >&
+  static const int kUserListFieldNumber = 4;
+  inline const ::IM::BaseDefine::UserInfo& user_list(int index) const;
+  inline ::IM::BaseDefine::UserInfo* mutable_user_list(int index);
+  inline ::IM::BaseDefine::UserInfo* add_user_list();
+  inline const ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::UserInfo >&
       user_list() const;
-  inline ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::AddRequestInfo >*
+  inline ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::UserInfo >*
       mutable_user_list();
 
   // optional bytes attach_data = 20;
@@ -3247,7 +3259,8 @@ class IMListAddRequestUserRsp : public ::google::protobuf::MessageLite {
   mutable int _cached_size_;
   ::google::protobuf::uint32 user_id_;
   ::google::protobuf::uint32 latest_update_time_;
-  ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::AddRequestInfo > user_list_;
+  ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::AddRequestInfo > user_req_list_;
+  ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::UserInfo > user_list_;
   ::std::string* attach_data_;
   #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   friend void  protobuf_AddDesc_IM_2eBuddy_2eproto_impl();
@@ -7428,31 +7441,61 @@ inline void IMListAddRequestUserRsp::set_latest_update_time(::google::protobuf::
   // @@protoc_insertion_point(field_set:IM.Buddy.IMListAddRequestUserRsp.latest_update_time)
 }
 
-// repeated .IM.BaseDefine.AddRequestInfo user_list = 3;
+// repeated .IM.BaseDefine.AddRequestInfo user_req_list = 3;
+inline int IMListAddRequestUserRsp::user_req_list_size() const {
+  return user_req_list_.size();
+}
+inline void IMListAddRequestUserRsp::clear_user_req_list() {
+  user_req_list_.Clear();
+}
+inline const ::IM::BaseDefine::AddRequestInfo& IMListAddRequestUserRsp::user_req_list(int index) const {
+  // @@protoc_insertion_point(field_get:IM.Buddy.IMListAddRequestUserRsp.user_req_list)
+  return user_req_list_.Get(index);
+}
+inline ::IM::BaseDefine::AddRequestInfo* IMListAddRequestUserRsp::mutable_user_req_list(int index) {
+  // @@protoc_insertion_point(field_mutable:IM.Buddy.IMListAddRequestUserRsp.user_req_list)
+  return user_req_list_.Mutable(index);
+}
+inline ::IM::BaseDefine::AddRequestInfo* IMListAddRequestUserRsp::add_user_req_list() {
+  // @@protoc_insertion_point(field_add:IM.Buddy.IMListAddRequestUserRsp.user_req_list)
+  return user_req_list_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::AddRequestInfo >&
+IMListAddRequestUserRsp::user_req_list() const {
+  // @@protoc_insertion_point(field_list:IM.Buddy.IMListAddRequestUserRsp.user_req_list)
+  return user_req_list_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::AddRequestInfo >*
+IMListAddRequestUserRsp::mutable_user_req_list() {
+  // @@protoc_insertion_point(field_mutable_list:IM.Buddy.IMListAddRequestUserRsp.user_req_list)
+  return &user_req_list_;
+}
+
+// repeated .IM.BaseDefine.UserInfo user_list = 4;
 inline int IMListAddRequestUserRsp::user_list_size() const {
   return user_list_.size();
 }
 inline void IMListAddRequestUserRsp::clear_user_list() {
   user_list_.Clear();
 }
-inline const ::IM::BaseDefine::AddRequestInfo& IMListAddRequestUserRsp::user_list(int index) const {
+inline const ::IM::BaseDefine::UserInfo& IMListAddRequestUserRsp::user_list(int index) const {
   // @@protoc_insertion_point(field_get:IM.Buddy.IMListAddRequestUserRsp.user_list)
   return user_list_.Get(index);
 }
-inline ::IM::BaseDefine::AddRequestInfo* IMListAddRequestUserRsp::mutable_user_list(int index) {
+inline ::IM::BaseDefine::UserInfo* IMListAddRequestUserRsp::mutable_user_list(int index) {
   // @@protoc_insertion_point(field_mutable:IM.Buddy.IMListAddRequestUserRsp.user_list)
   return user_list_.Mutable(index);
 }
-inline ::IM::BaseDefine::AddRequestInfo* IMListAddRequestUserRsp::add_user_list() {
+inline ::IM::BaseDefine::UserInfo* IMListAddRequestUserRsp::add_user_list() {
   // @@protoc_insertion_point(field_add:IM.Buddy.IMListAddRequestUserRsp.user_list)
   return user_list_.Add();
 }
-inline const ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::AddRequestInfo >&
+inline const ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::UserInfo >&
 IMListAddRequestUserRsp::user_list() const {
   // @@protoc_insertion_point(field_list:IM.Buddy.IMListAddRequestUserRsp.user_list)
   return user_list_;
 }
-inline ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::AddRequestInfo >*
+inline ::google::protobuf::RepeatedPtrField< ::IM::BaseDefine::UserInfo >*
 IMListAddRequestUserRsp::mutable_user_list() {
   // @@protoc_insertion_point(field_mutable_list:IM.Buddy.IMListAddRequestUserRsp.user_list)
   return &user_list_;
@@ -7460,13 +7503,13 @@ IMListAddRequestUserRsp::mutable_user_list() {
 
 // optional bytes attach_data = 20;
 inline bool IMListAddRequestUserRsp::has_attach_data() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
 inline void IMListAddRequestUserRsp::set_has_attach_data() {
-  _has_bits_[0] |= 0x00000008u;
+  _has_bits_[0] |= 0x00000010u;
 }
 inline void IMListAddRequestUserRsp::clear_has_attach_data() {
-  _has_bits_[0] &= ~0x00000008u;
+  _has_bits_[0] &= ~0x00000010u;
 }
 inline void IMListAddRequestUserRsp::clear_attach_data() {
   if (attach_data_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
